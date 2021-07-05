@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '../components/Button';
 
 function IndexPage() {
   return (
@@ -29,8 +30,15 @@ function IndexPage() {
       </ul>
       <form action="/" method="GET">
         <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input type="text" placeholder="Placeholder text!" id="name" />
+          <label htmlFor="name">
+            Name
+            <input
+              name="name"
+              type="text"
+              placeholder="Placeholder text!"
+              id="name"
+            />
+          </label>
         </div>
         <input type="password" />
         <input type="email" />
@@ -56,6 +64,10 @@ function IndexPage() {
         repellendus neque provident accusamus impedit quaerat incidunt officiis
         velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
       </p>
+      <Button>Let's work together</Button>
+      <Button size="sm">Small</Button>
+      <Button size="md">Medium</Button>
+      <Button size="lg">Large</Button>
     </div>
   );
 }

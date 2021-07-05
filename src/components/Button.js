@@ -10,6 +10,7 @@ export const Button = styled.button`
   &:hover {
     box-shadow: var(--elevation-2);
   }
+
   ${({ size }) => {
     switch (size) {
       case 'sm':
@@ -22,6 +23,7 @@ export const Button = styled.button`
         return 'font-size: 1.8rem';
     }
   }}
+
   ${({ type }) => {
     switch (type) {
       case 'primary':
