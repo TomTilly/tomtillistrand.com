@@ -18,9 +18,7 @@ export default function Nav() {
     <NavStyles>
       <ul>
         <li className="logo">
-          <Link to="/">
-            Tom Tillistrand
-          </Link>
+          <Link to="/">Tom Tillistrand</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
@@ -33,5 +31,5 @@ export default function Nav() {
         </li>
       </ul>
     </NavStyles>
-  )
+  );
 }

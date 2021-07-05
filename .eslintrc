@@ -1,0 +1,6 @@
+{
+  "extends": ["wesbos"],
+  "rules": {
+    "react/jsx-props-no-spreading": 1
+  }
+}

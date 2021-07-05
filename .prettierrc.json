@@ -1,0 +1,14 @@
+{
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "printWidth": 80,
+  "endOfLine": "auto",
+  "overrides": [
+    {
+      "files": ["**/*.html"],
+      "options": {
+        "embeddedLanguageFormatting": "off"
+      }
+    }
+  ]
+}
