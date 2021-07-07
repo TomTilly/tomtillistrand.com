@@ -9,7 +9,7 @@ const ToggleSwitch = styled.button`
   cursor: pointer;
 
   .icon {
-    width: 200px;
+    width: 30px;
     height: auto;
     color: #f2c94c;
     transition: color 0.2s linear;

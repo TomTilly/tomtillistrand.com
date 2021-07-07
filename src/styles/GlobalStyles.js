@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
   :root {
     /* Colors */
     --purple: #3748D6;
+    --light-purple: #505FD6;
     --green: #00B084;
     --red: #FF3B48;
     --black: #444;
@@ -19,14 +20,15 @@ const GlobalStyles = createGlobalStyle`
 
     /* Color Intentions */
     --primary: var(--purple);
+    --primary-light: var(--light-purple);
     --secondary: var(--green);
     --tertiary: var(--red);
     --body-bg: var(--white);
     --body-text-color: var(--black);
     --header-bg: var(--white);
     --outline-color: var(--primary);
-    --scrollbar-color: transparent;
-    --scrollbar-thumb-color: var(--gray-300);
+    --scrollbar-color: var(--body-bg);
+    --scrollbar-thumb-color: var(--primary);
 
     /* Typography */
     --system-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -45,12 +47,12 @@ const GlobalStyles = createGlobalStyle`
     --small-text: 1.4rem;
 
       /* Elevation */
-    --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    --elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    --elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
       0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    --elevation-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
       0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
       /* Spacing and Sizing */
@@ -62,6 +64,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     line-height: 1.6;
     font-size: var(--root-font-size);
+    scroll-behavior: smooth;
   }
 
   *, *::before, *::after {
@@ -80,30 +83,31 @@ const GlobalStyles = createGlobalStyle`
     transition: background-color .2s linear, color .2s linear;
   }
 
-${
-  // scrollbar CSS
-  '' /* 
+  ::selection {
+    background: var(--primary);
+    color: var(--white);
+  }
+
+  ${
+    '' /* body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
   html {
-    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-color);
     scrollbar-width: thin;
+    scrollbar-color:var(--scrollbar-thumb-color) var(--scrollbar-color);
   }
-
-  ::-webkit-scrollbar {
-      width: 10px;
-      background-color: var(--scrollbar-color);
+  
+  body::-webkit-scrollbar-track{
+    background: var(--scrollbar-color);
   }
-
-  ::-webkit-scrollbar-track {
-    border-radius: 3px;
-    background-color: var(--scrollbar-color);
-  }
-     
-  ::-webkit-scrollbar-thumb {
-    border-radius: 5px;
+  
+  body::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-thumb-color);
-    border: 2px solid var(--gray-100);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbar-color);
   } */
-}
+  }
 
   img {
     max-width: 100%;
@@ -167,7 +171,7 @@ ${
   }
 
   .dark-mode {
-    --body-bg: var(--dark-blue);
+    --body-bg: #0F141B;
     --body-text-color: var(--gray-200);
   }
 `;

@@ -58,7 +58,7 @@ function IndexPage() {
         repellendus neque provident accusamus impedit quaerat incidunt officiis
         velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
       </p>
-      <h6>Heading 6</h6>
+      <h6 id="hire-me">Heading 6</h6>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ipsa
         repellendus neque provident accusamus impedit quaerat incidunt officiis
