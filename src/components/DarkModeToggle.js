@@ -21,13 +21,13 @@ const ToggleSwitch = styled.button`
 
   .icon.moon {
     color: white;
-    opacity: 0.6;
+    opacity: 0.8;
     transition: opacity 0.2s linear, color 0.2s linear;
   }
 
   .icon.moon:hover {
     color: white;
-    opacity: 0.8;
+    opacity: 1;
   }
 
   .rays {

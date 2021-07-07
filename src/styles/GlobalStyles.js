@@ -172,7 +172,7 @@ const GlobalStyles = createGlobalStyle`
 
   .dark-mode {
     --body-bg: #2B2E3A;
-    --body-text-color: var(--gray-200);
+    --body-text-color: var(--white);
   }
 `;
 
