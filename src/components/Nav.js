@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import DarkModeToggle from './DarkModeToggle';
 import { Button } from './Button';
+import Monogram from '../assets/images/monogram.inline.svg';
 
 const NavStyles = styled.nav`
   ul {
@@ -21,7 +22,10 @@ export default function Nav() {
       <NavStyles>
         <ul>
           <li className="logo">
-            <Link to="/">Tom Tillistrand</Link>
+            <Link to="/">
+              <Monogram />
+              Tom Tillistrand
+            </Link>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -30,11 +34,13 @@ export default function Nav() {
             <Link to="/articles">Articles</Link>
           </li>
           <li>
-            <Link to="#hire-me">Hire me</Link>
+            <Link to="#hire-me">Snippets</Link>
           </li>
         </ul>
       </NavStyles>
-      <Button>Let's work together</Button>
+      <Button as="a" href="#hire-me">
+        Let's work together
+      </Button>
       <DarkModeToggle />
     </header>
   );
