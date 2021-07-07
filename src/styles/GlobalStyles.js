@@ -171,7 +171,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .dark-mode {
-    --body-bg: #0F141B;
+    --body-bg: #2B2E3A;
     --body-text-color: var(--gray-200);
   }
 `;
