@@ -4,12 +4,16 @@ import GlobalStyles from '../styles/GlobalStyles';
 import Footer from './Footer';
 import Nav from './Nav';
 
-export default function Layout({ children }) {
+const Main = styled.main`
+  margin-top: 5rem;
+`;
+
+export default function Layout({ path, children }) {
   return (
     <>
       <GlobalStyles />
-      <Nav />
-      <main>{ children }</main>
+      <Nav isHome={path === '/'} />
+      <Main>{children}</Main>
       <Footer />
     </>
   );

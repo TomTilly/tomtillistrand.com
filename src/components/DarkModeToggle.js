@@ -4,15 +4,14 @@ import styled from 'styled-components';
 const ToggleSwitch = styled.button`
   border: 0;
   background: transparent;
-  padding: 0;
   margin: 0;
   cursor: pointer;
 
   .icon {
-    width: 30px;
+    width: 25px;
     height: auto;
     color: #f2c94c;
-    transition: color 0.2s linear;
+    transition: color 0.2s linear, transform 0.2s linear;
   }
 
   .icon:hover {
@@ -22,6 +21,7 @@ const ToggleSwitch = styled.button`
   .icon.moon {
     color: white;
     opacity: 0.8;
+    transform: scale(1.3);
     transition: opacity 0.2s linear, color 0.2s linear;
   }
 
@@ -35,8 +35,9 @@ const ToggleSwitch = styled.button`
   }
 
   .moon .rays {
-    transition: opacity 0.2s linear;
+    transition: opacity 0.01s linear, transform 0.01s linear;
     opacity: 0;
+    transform: scale(0);
   }
 
   .cut-out {
