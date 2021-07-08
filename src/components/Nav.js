@@ -15,8 +15,7 @@ const HeaderContainer = styled.div`
 
 const Header = styled.header`
   position: relative;
-  margin-top: 3rem;
-  padding: 1rem 0;
+  padding: 5rem 0 1rem;
   /* position: sticky;
   top: 0;
   background-color: var(--body-bg);
@@ -26,7 +25,7 @@ const Header = styled.header`
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--body-text-color);
+    color: inherit;
 
     svg {
       margin-right: 1.5rem;
@@ -71,7 +70,7 @@ const NavStyles = styled.nav`
 
   a {
     text-decoration: none;
-    color: var(--body-text-color);
+    color: inherit;
     display: block;
   }
 
@@ -83,6 +82,7 @@ const NavStyles = styled.nav`
     content: '';
     width: 0;
     height: 3px;
+    border-radius: 3px;
     display: block;
     background-color: var(--primary);
     transition: width 0.2s linear;

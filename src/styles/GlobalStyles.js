@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
     --purple-100: #F5F7FD;
     --green: #00B084;
     --red: #FF3B48;
-    --black: #444;
+    --black: #333;
     --dark-blue: #0E273C;
     --gray-100: #F2F2F2;
     --gray-200: #E0E0E0;
@@ -58,13 +58,18 @@ const GlobalStyles = createGlobalStyle`
       0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
       /* Spacing and Sizing */
-      --container-max-width: 1040px;
+      --container-max-width: 1080px;
       --border-radius: 6px;
+      --section-padding: 3rem;
+
+      /* Transitions */
+      --transition-duration: .2s;
+      --transition-timing: linear;
   }
 
   html {
     box-sizing: border-box;
-    line-height: 1.6;
+    line-height: 1.7;
     font-size: var(--root-font-size);
     scroll-behavior: smooth;
   }
@@ -82,7 +87,7 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.7;
     letter-spacing: .15px;
     min-height: 100vh;
-    transition: background-color .2s linear, color .2s linear;
+    transition: background-color var(--transition-duration) var(--transition-timing), color var(--transition-duration) var(--transition-timing);
   }
 
   ::selection {
@@ -148,6 +153,10 @@ const GlobalStyles = createGlobalStyle`
   }
   h6, .h6 {
     font-size: var(--h6);
+  }
+
+  small {
+    font-size: var(--small-text);
   }
 
   label {

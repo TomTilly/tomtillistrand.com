@@ -12,6 +12,7 @@ export const Button = styled.button`
   transition: 0.3s ease box-shadow;
   box-shadow: var(--elevation-1);
   cursor: pointer;
+  display: inline-block;
   transition: transform var(--transition-duration) ease-in-out,
     background-color var(--transition-duration) ease-in-out;
 
