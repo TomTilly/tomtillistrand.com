@@ -1,5 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Nav from '../components/Nav';
 
 export default function about() {
-  return 'about';
+  return (
+    <>
+      <Nav />
+      About
+    </>
+  );
 }

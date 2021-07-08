@@ -1,5 +1,11 @@
 import React from 'react';
+import Nav from '../components/Nav';
 
 export default function snippets() {
-  return 'snippets';
+  return (
+    <>
+      <Nav />
+      Snippets
+    </>
+  );
 }

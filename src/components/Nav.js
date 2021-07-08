@@ -111,19 +111,20 @@ const Menu = styled.div`
   `}
 `;
 
+const LogoText = ({ children, isHome, ...props }) =>
+  isHome ? <h1 {...props}>{children}</h1> : <span {...props}>{children}</span>;
+
 export default function Nav({ isHome }) {
   const [isOpen, setOpen] = useState(false);
 
   return (
     <Header>
       <HeaderContainer>
-        <Link to="/" className="logo">
+        <Link to="/" className="logo" aria-label="Link to homepage">
           <Monogram />
-          {isHome ? (
-            <h1 className="logo__text">Tom Tillistrand</h1>
-          ) : (
-            <span className="logo__text">Tom Tillistrand</span>
-          )}
+          <LogoText className="logo__text" isHome={isHome}>
+            Tom Tillistrand
+          </LogoText>
         </Link>
         <Menu>
           <NavStyles>

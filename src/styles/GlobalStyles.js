@@ -5,8 +5,9 @@ import 'normalize.css';
 const GlobalStyles = createGlobalStyle`
   :root {
     /* Colors */
-    --purple: #3748D6;
-    --light-purple: #505FD6;
+    --purple-400: #3748D6;
+    --purple-300: #505FD6;
+    --purple-100: #F5F7FD;
     --green: #00B084;
     --red: #FF3B48;
     --black: #444;
@@ -19,11 +20,12 @@ const GlobalStyles = createGlobalStyle`
     --white: #FEFEFE;
 
     /* Color Intentions */
-    --primary: var(--purple);
-    --primary-light: var(--light-purple);
+    --primary: var(--purple-400);
+    --primary-light: var(--purple-300);
     --secondary: var(--green);
     --tertiary: var(--red);
     --body-bg: var(--white);
+    --accent-bg: hsla(234, 66%, 53%, .05);
     --body-text-color: var(--black);
     --header-bg: var(--white);
     --outline-color: var(--primary);

@@ -22,7 +22,8 @@ const ToggleSwitch = styled.button`
     color: white;
     opacity: 0.8;
     transform: scale(1.3);
-    transition: opacity 0.2s linear, color 0.2s linear;
+    transition: opacity 0.2s linear, color 0.2s linear,
+      transform 0.2s linear 0.1s;
   }
 
   .icon.moon:hover {
@@ -35,9 +36,8 @@ const ToggleSwitch = styled.button`
   }
 
   .moon .rays {
-    transition: opacity 0.01s linear, transform 0.01s linear;
+    transition: opacity 0.05s linear;
     opacity: 0;
-    transform: scale(0);
   }
 
   .cut-out {
@@ -50,11 +50,19 @@ const ToggleSwitch = styled.button`
   }
 `;
 
-function DarkModeSwitch() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+// TODO: move where I keep track of dark mode into context within Layout component
+function DarkModeToggle() {
+  const [isDarkMode, setIsDarkMode] = useState(
+    JSON.parse(localStorage.getItem('isDarkMode') || 'false')
+  );
+
+  if (isDarkMode) {
+    document.body.classList.add('dark-mode');
+  }
 
   const handleClick = (e) => {
     document.body.classList.toggle('dark-mode');
+    localStorage.setItem('isDarkMode', JSON.stringify(!isDarkMode));
     setIsDarkMode(!isDarkMode);
   };
 
@@ -108,4 +116,4 @@ function DarkModeSwitch() {
   );
 }
 
-export default DarkModeSwitch;
+export default DarkModeToggle;
