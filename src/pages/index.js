@@ -51,8 +51,8 @@ const HeroLeft = () => {
       </HeroHeading>
       <HeroPara>
         Here you can find out more about my web development services and read
-        through various Shopify, programming, and freelancing articles that I’ve
-        written. Welcome, and thanks for checking out my site!
+        through my various programming, Shopify, and freelancing articles.
+        Welcome, and thanks for checking out my site!
       </HeroPara>
       <HeroPara>
         <b>A little bit about me:</b> I’ve been building professional websites
