@@ -64,8 +64,8 @@ const HeroLeft = () => {
         <b>A little bit about me:</b> I’ve been building professional websites
         for six years from my office in Boston, Massachusetts. My current focus
         is building modern Shopify websites and apps that are both technically
-        sound and a joy to use. If you need help with Shopify, React, or web
-        development in general, I can help!
+        sound and a joy to use. If you need help with Shopify, JavaScript,
+        React, or web development in general, I can help!
       </HeroPara>
       <Button as="a" href="#hire-me">
         Let's work together
@@ -145,8 +145,8 @@ const HeroRight = () => {
         </SocialLink>
       </SocialWrapper>
       <small>
-        <b>My tools:</b> HTML, CSS, SCSS, JavaScript, React, Liquid, NodeJS,
-        MongoDB, GraphQL, GatsbyJS, Styled Components, Figma, Git
+        <b>My tools:</b> HTML, CSS, SCSS, JavaScript, React, Styled Components,
+        GatsbyJS, Liquid, NodeJS, MongoDB, GraphQL, Figma, Git
       </small>
     </Wrapper>
   );

@@ -23,7 +23,7 @@ const IconWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1.8rem;
-  margin-right: 2rem;
+  margin-bottom: 1rem;
 
   ${({ rgb }) => {
     if (!rgb) return;
@@ -37,15 +37,29 @@ const IconWrapper = styled.div`
       return `color: rgb(${rgbString})`;
     }}
   }
+
+  ${above.small`
+    margin-right: 2rem;
+  `}
 `;
 
 const CardTitle = styled.h3`
   margin-top: 0;
   font-size: var(--h4);
+  text-align: center;
+
+  ${above.small`
+    text-align: left;
+  `}
 `;
 
 const CardDescription = styled.p`
   margin-bottom: 0;
+  text-align: center;
+
+  ${above.small`
+    text-align: left;
+  `}
 `;
 
 export default function Card({ title, description, Icon, rgb }) {
