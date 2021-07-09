@@ -16,7 +16,6 @@ const HeaderWrapper = styled.div`
     backgroundColor || 'var(--accent-bg)'};
   ${({ backgroundImage }) => `background-image: url(${backgroundImage});`}
   flex-basis: 100vh;
-  max-height: 800px;
   display: flex;
   flex-direction: column;
 `;
