@@ -60,6 +60,7 @@ const GlobalStyles = createGlobalStyle`
 
       /* Spacing and Sizing */
       --container-max-width: 1080px;
+      --text-max-width: 650px;
       --border-radius: 6px;
       --section-padding: 3rem;
 
@@ -129,7 +130,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   p {
-    margin: 0 0 0.75em;
+    margin: 0 0 1.25em;
   }
 
   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {

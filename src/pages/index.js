@@ -68,9 +68,9 @@ const HeroLeft = () => {
         sound and a joy to use. If you need help with Shopify, JavaScript,
         React, or web development in general, I can help!
       </HeroPara>
-      <Button as="a" href="#hire-me">
+      <ButtonLink isInternal href="#hire-me">
         Let's work together
-      </Button>
+      </ButtonLink>
     </>
   );
 };
@@ -192,6 +192,45 @@ function IndexPage() {
             rgb={[106, 55, 214]}
           />
         </Grid>
+      </Section>
+      <Section type="thin" title="Why Hire Me?">
+        <p>
+          Getting your Shopify store done right is important. If your site is
+          slow, buggy, unintuitive, lacking features, or ugly, it can cost you
+          in reputation and revenue.
+        </p>
+        <p>
+          I can make sure you avoid those pitfalls and build a store that’s a
+          joy to use and increases your bottom line.
+        </p>
+        <p>
+          Often, businesses will skimp on the development of their stores
+          upfront, resulting in unpolished, mediocre experiences for their
+          users.
+        </p>
+        <p>
+          Rather than hiring a Shopify expert to fix your store after you’ve
+          lost potential customers, why not save yourself the time and hassle
+          and get it right the first time?
+        </p>
+        <p>
+          I will get your Shopify site done right. My sites are built on a
+          foundation of modern tooling with clean HTML, Liquid, CSS, SCSS,
+          JavaScript, and React.
+        </p>
+        <p>
+          I’m easy to work with, a clear communicator, and able to work on my
+          own or as part of a team. I can also advise on key technical decisions
+          to make sure your site infrastructure is robust, fast, and scalable.
+        </p>
+        <p>
+          I take pride in producing quality work and providing outstanding
+          service to my clients. You can be confident that your store (and
+          business) is treated with the utmost care.
+        </p>
+        <ButtonLink isInternal href="#hire-me">
+          Let's Get Started
+        </ButtonLink>
       </Section>
       <h1>Heading 1</h1>
       <p>

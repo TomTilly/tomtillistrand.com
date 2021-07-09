@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { headingStyles, wideContainerStyles } from '../utilities';
 import DownArrow from '../assets/images/down-arrow.inline.svg';
 
@@ -23,7 +24,7 @@ const ContentWrapper = styled.div`
   padding-bottom: 4rem;
 `;
 
-const ScrollDownLink = styled.a`
+const ScrollDownLink = styled(Link)`
   color: var(--primary);
   border: none;
   background: transparent;

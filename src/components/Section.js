@@ -1,20 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
-import { wideContainerStyles } from '../utilities';
+import { wideContainerStyles, textContainerStyles } from '../utilities';
 
 const SectionStyles = styled.section`
-  ${wideContainerStyles}
-  padding: 3rem 0;
+  ${({ type }) => {
+    if (type === 'thin') {
+      return textContainerStyles;
+    }
+    return wideContainerStyles;
+  }}
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const SectionTitle = styled.h2`
+  margin-top: 0;
   text-align: center;
   margin-bottom: 3rem;
 `;
 
-export default function Section({ children, title, ...props }) {
+export default function Section({ children, title, type, ...props }) {
   return (
-    <SectionStyles {...props}>
+    <SectionStyles {...props} type={type}>
       <SectionTitle>{title}</SectionTitle>
       {children}
     </SectionStyles>
