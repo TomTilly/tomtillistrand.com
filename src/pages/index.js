@@ -15,6 +15,10 @@ const HeaderWrapper = styled.div`
   background-color: ${({ backgroundColor }) =>
     backgroundColor || 'var(--accent-bg)'};
   ${({ backgroundImage }) => `background-image: url(${backgroundImage});`}
+  flex-basis: 100vh;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const HeroLeft = () => {
@@ -149,10 +153,12 @@ const HeroRight = () => {
 function IndexPage() {
   return (
     <>
-      <HeaderWrapper>
-        <Nav isHome />
-        <Hero LeftContent={HeroLeft} RightContent={HeroRight} />
-      </HeaderWrapper>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <HeaderWrapper>
+          <Nav isHome />
+          <Hero LeftContent={HeroLeft} RightContent={HeroRight} />
+        </HeaderWrapper>
+      </div>
       <Section
         title="How can an expert Shopify developer help?"
         id="shopify-expert"

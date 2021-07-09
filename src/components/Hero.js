@@ -11,7 +11,9 @@ const HeroStyles = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding-bottom: 0.8rem;
+  flex-grow: 1;
 `;
 
 const ContentWrapper = styled.div`
