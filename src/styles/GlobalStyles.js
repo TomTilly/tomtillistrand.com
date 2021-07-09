@@ -9,7 +9,8 @@ const GlobalStyles = createGlobalStyle`
     --purple-300: #505FD6;
     --purple-200: #677CE6;
     --purple-100: #F5F7FD;
-    --green: #00B084;
+    --green-400: #00B084;
+    --green-300: #00D184;
     --red: #FF3B48;
     --black: #333;
     --dark-blue: #0E273C;
@@ -23,7 +24,8 @@ const GlobalStyles = createGlobalStyle`
     /* Color Intentions */
     --primary: var(--purple-300);
     --primary-light: var(--purple-200);
-    --secondary: var(--green);
+    --secondary: var(--green-400);
+    --secondary-light: var(--green-300);
     --tertiary: var(--red);
     --body-bg: var(--white);
     --accent-bg: hsla(234, 66%, 53%, .05);

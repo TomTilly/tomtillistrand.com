@@ -38,6 +38,7 @@ const ScrollDownLink = styled(Link)`
     transform: scale(0.9);
     transition: transform 0.2s linear;
   }
+
   &:hover svg {
     transform: scale(1) translateY(2px);
   }

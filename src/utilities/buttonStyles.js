@@ -13,7 +13,8 @@ export const buttonStyles = () => css`
   cursor: pointer;
   display: inline-block;
   transition: transform var(--transition-duration) ease-in-out,
-    background-color var(--transition-duration) ease-in-out;
+    background-color var(--transition-duration) ease-in-out,
+    color var(--transition-duration) ease-in-out;
 
   &:hover {
     background-color: var(--primary-light);
@@ -23,6 +24,7 @@ export const buttonStyles = () => css`
 
   &:active {
     transform: translateY(0);
+    box-shadow: none;
   }
 
   ${({ size }) => {
@@ -47,10 +49,20 @@ export const buttonStyles = () => css`
       case 'secondary':
         return `
           background-color: var(--secondary);
+          &:hover {
+            background-color: var(--secondary-light);
+          }
         `;
       case 'ghost':
         return `
           background-color: transparent;
+          border: 2px solid var(--primary);
+          color: var(--primary);
+
+          &:hover {
+            background-color: var(--primary);
+            color: var(--white);
+          }
         `;
       default:
         return `

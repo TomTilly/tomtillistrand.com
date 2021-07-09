@@ -228,7 +228,7 @@ function IndexPage() {
           service to my clients. You can be confident that your store (and
           business) is treated with the utmost care.
         </p>
-        <ButtonLink isInternal href="#hire-me">
+        <ButtonLink isInternal href="#hire-me" size="lg">
           Let's Get Started
         </ButtonLink>
       </Section>
@@ -321,6 +321,8 @@ function IndexPage() {
       <Button size="sm">Small</Button>
       <Button size="md">Medium</Button>
       <Button size="lg">Large</Button>
+      <Button type="secondary">Secondary</Button>
+      <Button type="ghost">Ghost</Button>
     </>
   );
 }
