@@ -21,8 +21,6 @@ const ContentWrapper = styled.div`
   grid-gap: 5rem;
   grid-template-columns: 1.25fr 1fr;
   padding-bottom: 4rem;
-  margin-top: auto;
-  margin-bottom: auto;
 `;
 
 const ScrollDownLink = styled.a`

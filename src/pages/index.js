@@ -15,9 +15,6 @@ const HeaderWrapper = styled.div`
   background-color: ${({ backgroundColor }) =>
     backgroundColor || 'var(--accent-bg)'};
   ${({ backgroundImage }) => `background-image: url(${backgroundImage});`}
-  flex-basis: 100vh;
-  display: flex;
-  flex-direction: column;
 `;
 
 const HeroLeft = () => {
