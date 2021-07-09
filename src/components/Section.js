@@ -9,12 +9,13 @@ const SectionStyles = styled.section`
 
 const SectionTitle = styled.h2`
   text-align: center;
+  margin-bottom: 3rem;
 `;
 
 export default function Section({ children, title, ...props }) {
   return (
     <SectionStyles {...props}>
-      <h2>{title}</h2>
+      <SectionTitle>{title}</SectionTitle>
       {children}
     </SectionStyles>
   );

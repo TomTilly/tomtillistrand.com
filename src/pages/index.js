@@ -10,6 +10,12 @@ import LinkedInLogo from '../assets/images/linkedin.inline.svg';
 import TwitterLogo from '../assets/images/twitter.inline.svg';
 import YoutubeLogo from '../assets/images/youtube.inline.svg';
 import Section from '../components/Section';
+import Card from '../components/Card';
+import WebsiteIcon from '../assets/images/website-with-brackets.inline.svg';
+import WindowIcon from '../assets/images/window.inline.svg';
+import ShoppingIcon from '../assets/images/shopping-gear.inline.svg';
+import LayersIcon from '../assets/images/layers.inline.svg';
+import Grid from '../components/Grid';
 
 const HeaderWrapper = styled.div`
   background-color: ${({ backgroundColor }) =>
@@ -95,7 +101,7 @@ const HeroRight = () => {
     <Wrapper>
       <StaticImage
         src="../assets/images/headshot.jpg"
-        placeholder="blurred"
+        placeholder="none"
         loading="eager"
         alt="Tom Tillistrand"
         width={250}
@@ -159,7 +165,32 @@ function IndexPage() {
         title="How can an expert Shopify developer help?"
         id="shopify-expert"
       >
-        Content goes here
+        <Grid>
+          <Card
+            title="Theme Development"
+            description="I develop bespoke Shopify themes from scratch using modern HTML, CSS, JavaScript, and Liquid. If you have a design, I can build a pixel perfect implementation for you."
+            Icon={WebsiteIcon}
+            rgb={[0, 176, 132]}
+          />
+          <Card
+            title="App Development"
+            description="I build Shopify apps that extend the functionality of Shopify using NodeJS and React."
+            Icon={WindowIcon}
+            rgb={[55, 72, 214]}
+          />
+          <Card
+            title="Customizations"
+            description="I customize prexisting Shopify themes to fit your needs. If you have a theme that you like but need to tweak, I can get it just right for you."
+            Icon={ShoppingIcon}
+            rgb={[255, 59, 72]}
+          />
+          <Card
+            title="Headless CMS Integration"
+            description="I implement Shopify as a headless CMS and build a detached front end in React with Gatsby."
+            Icon={LayersIcon}
+            rgb={[106, 55, 214]}
+          />
+        </Grid>
       </Section>
       <h1>Heading 1</h1>
       <p>

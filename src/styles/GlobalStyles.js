@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     /* Colors */
     --purple-400: #3748D6;
     --purple-300: #505FD6;
+    --purple-200: #677CE6;
     --purple-100: #F5F7FD;
     --green: #00B084;
     --red: #FF3B48;
@@ -20,8 +21,8 @@ const GlobalStyles = createGlobalStyle`
     --white: #FEFEFE;
 
     /* Color Intentions */
-    --primary: var(--purple-400);
-    --primary-light: var(--purple-300);
+    --primary: var(--purple-300);
+    --primary-light: var(--purple-200);
     --secondary: var(--green);
     --tertiary: var(--red);
     --body-bg: var(--white);
