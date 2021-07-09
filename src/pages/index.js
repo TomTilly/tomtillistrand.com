@@ -16,6 +16,7 @@ import WindowIcon from '../assets/images/window.inline.svg';
 import ShoppingIcon from '../assets/images/shopping-gear.inline.svg';
 import LayersIcon from '../assets/images/layers.inline.svg';
 import Grid from '../components/Grid';
+import { ButtonLink } from '../components/ButtonLink';
 
 const HeaderWrapper = styled.div`
   background-color: ${({ backgroundColor }) =>

@@ -3,9 +3,9 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Hamburger from 'hamburger-react';
 import DarkModeToggle from './DarkModeToggle';
-import { Button } from './Button';
 import Monogram from '../assets/images/monogram.inline.svg';
-import { wideContainerStyles, above } from '../utilities';
+import ButtonLink from './ButtonLink';
+import { wideContainerStyles, above, buttonStyles } from '../utilities';
 
 const HeaderContainer = styled.div`
   ${wideContainerStyles};
@@ -54,8 +54,9 @@ const StyledHamburger = styled(Hamburger)`
   `}
 `;
 
-const CtaButton = styled(Button)`
+const CtaButton = styled(Link)`
   margin-right: 1em;
+  ${buttonStyles}
 `;
 
 const NavStyles = styled.nav`
@@ -140,11 +141,7 @@ export default function Nav({ isHome }) {
               </li>
             </ul>
           </NavStyles>
-          {isHome && (
-            <CtaButton as="a" href="#hire-me">
-              Let's work together
-            </CtaButton>
-          )}
+          {isHome && <CtaButton href="#hire-me">Let's work together</CtaButton>}
           <DarkModeToggle />
         </Menu>
         <StyledHamburger toggled={isOpen} toggle={setOpen} />
