@@ -6,7 +6,7 @@ import { buttonStyles } from '../utilities';
 function ButtonLinkBase({ className, children, href, isInternal }) {
   if (isInternal) {
     return (
-      <Link className={className} href={href}>
+      <Link className={className} to={href}>
         {children}
       </Link>
     );

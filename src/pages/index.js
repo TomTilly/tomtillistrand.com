@@ -8,6 +8,7 @@ import Grid from '../components/Grid';
 import { ButtonLink } from '../components/ButtonLink';
 import Section from '../components/Section';
 import Card from '../components/Card';
+import ClientLogo from '../components/ClientLogo';
 import GithubLogo from '../assets/images/github.inline.svg';
 import LinkedInLogo from '../assets/images/linkedin.inline.svg';
 import TwitterLogo from '../assets/images/twitter.inline.svg';
@@ -16,7 +17,10 @@ import WebsiteIcon from '../assets/images/website-with-brackets.inline.svg';
 import WindowIcon from '../assets/images/window.inline.svg';
 import ShoppingIcon from '../assets/images/shopping-gear.inline.svg';
 import LayersIcon from '../assets/images/layers.inline.svg';
-import LNRJLogoSrc from '../assets/images/lnrj-logo.png';
+import lnrjLogoSrc from '../assets/images/lnrj-united-logo.png';
+import quartucciaLogoSrc from '../assets/images/quartuccia-logo.png';
+import jfLogoSrc from '../assets/images/j-f-logo.svg';
+import dreamersTeamLogoSrc from '../assets/images/dreamers-team-logo.png';
 
 const HeaderWrapper = styled.div`
   background-color: ${({ backgroundColor }) =>
@@ -180,7 +184,7 @@ function IndexPage() {
             rgb={[55, 72, 214]}
           />
           <Card
-            title="Customizations"
+            title="Theme Customizations"
             description="I customize prexisting Shopify themes to fit your needs. If you have a theme that you like but need to tweak, I can get it just right for you."
             Icon={ShoppingIcon}
             rgb={[255, 59, 72]}
@@ -233,11 +237,12 @@ function IndexPage() {
         </ButtonLink>
       </Section>
       <Section title="Companies I've Worked With">
-        <img
-          src={LNRJLogoSrc}
-          alt="LNRJ Logo"
-          style={{ opacity: 0.5, filter: 'invert(1)' }}
-        />
+        <Grid columns={4}>
+          <ClientLogo src={jfLogoSrc} alt="Jack and Ferdi Logo" />
+          <ClientLogo src={lnrjLogoSrc} alt="LNRJ United Logo" />
+          <ClientLogo src={quartucciaLogoSrc} alt="Marica Quartuccia's Logo" />
+          <ClientLogo src={dreamersTeamLogoSrc} alt="Dreamers Team Logo" />
+        </Grid>
       </Section>
       <h1>Heading 1</h1>
       <p>

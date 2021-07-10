@@ -63,7 +63,7 @@ export default function Hero({ order, LeftContent, RightContent }) {
           <RightContent />
         </div>
       </ContentWrapper>
-      <ScrollDownLink href="#shopify-expert">
+      <ScrollDownLink to="#shopify-expert">
         <ScrollDownText>Learn more</ScrollDownText>
         <DownArrow />
       </ScrollDownLink>
