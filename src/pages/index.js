@@ -4,19 +4,19 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { Button } from '../components/Button';
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
-import Headshot from '../assets/images/headshot.jpg';
+import Grid from '../components/Grid';
+import { ButtonLink } from '../components/ButtonLink';
+import Section from '../components/Section';
+import Card from '../components/Card';
 import GithubLogo from '../assets/images/github.inline.svg';
 import LinkedInLogo from '../assets/images/linkedin.inline.svg';
 import TwitterLogo from '../assets/images/twitter.inline.svg';
 import YoutubeLogo from '../assets/images/youtube.inline.svg';
-import Section from '../components/Section';
-import Card from '../components/Card';
 import WebsiteIcon from '../assets/images/website-with-brackets.inline.svg';
 import WindowIcon from '../assets/images/window.inline.svg';
 import ShoppingIcon from '../assets/images/shopping-gear.inline.svg';
 import LayersIcon from '../assets/images/layers.inline.svg';
-import Grid from '../components/Grid';
-import { ButtonLink } from '../components/ButtonLink';
+import LNRJLogoSrc from '../assets/images/lnrj-logo.png';
 
 const HeaderWrapper = styled.div`
   background-color: ${({ backgroundColor }) =>
@@ -231,6 +231,13 @@ function IndexPage() {
         <ButtonLink isInternal href="#hire-me" size="lg">
           Let's Get Started
         </ButtonLink>
+      </Section>
+      <Section title="Companies I've Worked With">
+        <img
+          src={LNRJLogoSrc}
+          alt="LNRJ Logo"
+          style={{ opacity: 0.5, filter: 'invert(1)' }}
+        />
       </Section>
       <h1>Heading 1</h1>
       <p>

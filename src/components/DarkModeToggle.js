@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import ThemeContext from '../context/ThemeContext';
 
 const ToggleSwitch = styled.button`
   border: 0;
@@ -50,26 +51,13 @@ const ToggleSwitch = styled.button`
   }
 `;
 
-// TODO: move where I keep track of dark mode into context within Layout component
 function DarkModeToggle() {
-  const [isDarkMode, setIsDarkMode] = useState(
-    JSON.parse(localStorage.getItem('isDarkMode') || 'false')
-  );
-
-  if (isDarkMode) {
-    document.body.classList.add('dark-mode');
-  }
-
-  const handleClick = (e) => {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('isDarkMode', JSON.stringify(!isDarkMode));
-    setIsDarkMode(!isDarkMode);
-  };
+  const { prefersDark, toggleDark } = useContext(ThemeContext);
 
   return (
-    <ToggleSwitch aria-hidden="true" type="button" onClick={handleClick}>
+    <ToggleSwitch aria-hidden="true" type="button" onClick={toggleDark}>
       <svg
-        className={`icon ${isDarkMode ? 'moon' : ''}`}
+        className={`icon ${prefersDark ? 'moon' : ''}`}
         width="24"
         height="24"
         viewBox="0 0 24 24"
