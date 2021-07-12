@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { headingStyles, wideContainerStyles } from '../utilities';
+import { above, headingStyles, wideContainerStyles } from '../utilities';
 import DownArrow from '../assets/images/down-arrow.inline.svg';
 
 // background-image: ${{backgroundImage} => `url(${backgroundImage})`};
@@ -23,10 +23,10 @@ const ContentWrapper = styled.div`
   grid-template-columns: 1fr;
   padding-bottom: 4rem;
 
-  @media (min-width: 900px) {
+  ${above.large`
     grid-template-columns: 1.25fr 1fr;
     grid-gap: 5rem;
-  }
+  `}
 `;
 
 const LeftColumn = styled.div``;
@@ -34,9 +34,9 @@ const LeftColumn = styled.div``;
 const RightColumn = styled.div`
   grid-row: 1;
 
-  @media (min-width: 900px) {
+  ${above.large`
     grid-row: auto;
-  }
+  `}
 `;
 
 const ScrollDownLink = styled(Link)`

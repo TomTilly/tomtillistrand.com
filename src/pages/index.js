@@ -64,6 +64,7 @@ const HeroLeft = () => {
     margin-bottom: 2rem;
   `;
 
+  // TODO: Fix rerendering of Hero component when clicking anchor links
   return (
     <HeroWrapper>
       <HeroHeading>
