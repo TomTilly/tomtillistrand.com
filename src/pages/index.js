@@ -8,6 +8,7 @@ import Grid from '../components/Grid';
 import { ButtonLink } from '../components/ButtonLink';
 import Section from '../components/Section';
 import Card from '../components/Card';
+import Testimonials from '../components/Testimonials';
 import ClientLogo from '../components/ClientLogo';
 import GithubLogo from '../assets/images/github.inline.svg';
 import LinkedInLogo from '../assets/images/linkedin.inline.svg';
@@ -29,144 +30,140 @@ const HeaderWrapper = styled.div`
   ${({ backgroundImage }) => `background-image: url(${backgroundImage});`}
 `;
 
-const HeroLeft = () => {
-  const HeroWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+const HeroWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    ${above.small`
-      align-items: flex-start;
-    `}
-  `;
-  const HeroHeading = styled.h2`
-    font-size: 2.8rem;
-    line-height: 1.2;
-    margin-top: 0;
+  ${above.small`
+    align-items: flex-start;
+  `}
+`;
 
-    .green-underline {
-      display: inline-block;
-    }
+const HeroHeading = styled.h2`
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-top: 0;
 
-    .green-underline::after {
-      display: block;
-      content: '';
-      width: 100%;
-      height: 5px;
-      border-radius: 3px;
-      transform: rotate(-3deg);
-      background-color: var(--secondary);
-      margin-bottom: 1.5rem;
-    }
-  `;
+  .green-underline {
+    display: inline-block;
+  }
 
-  const HeroPara = styled.p`
-    margin-bottom: 2rem;
-  `;
+  .green-underline::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 5px;
+    border-radius: 3px;
+    transform: rotate(-3deg);
+    background-color: var(--secondary);
+    margin-bottom: 1.5rem;
+  }
+`;
 
+const HeroPara = styled.p`
+  margin-bottom: 2rem;
+`;
+const HeroLeft = () => (
   // TODO: Fix rerendering of Hero component when clicking anchor links
-  return (
-    <HeroWrapper>
-      <HeroHeading>
-        👋 Hi, I'm Tom. I'm a Freelance Front End Web Developer specializing in{' '}
-        <span className="green-underline">Shopify</span>.
-      </HeroHeading>
-      <HeroPara>
-        Here you can find out more about my web development services and read
-        through my various programming, Shopify, and freelancing articles.
-        Welcome, and thanks for checking out my site!
-      </HeroPara>
-      <HeroPara>
-        <b>A little bit about me:</b> I’ve been building professional websites
-        for six years from my office in Boston, Massachusetts. My current focus
-        is building modern Shopify websites and apps that are both technically
-        sound and a joy to use. If you need help with Shopify, JavaScript,
-        React, or web development in general, I can help!
-      </HeroPara>
-      <ButtonLink href="#hire-me" isAnchor>
-        Let's work together
-      </ButtonLink>
-    </HeroWrapper>
-  );
-};
+  <HeroWrapper>
+    <HeroHeading>
+      👋 Hi, I'm Tom. I'm a Freelance Front End Web Developer specializing in{' '}
+      <span className="green-underline">Shopify</span>.
+    </HeroHeading>
+    <HeroPara>
+      Here you can find out more about my web development services and read
+      through my various programming, Shopify, and freelancing articles.
+      Welcome, and thanks for checking out my site!
+    </HeroPara>
+    <HeroPara>
+      <b>A little bit about me:</b> I’ve been building professional websites for
+      six years from my office in Boston, Massachusetts. My current focus is
+      building modern Shopify websites and apps that are both technically sound
+      and a joy to use. If you need help with Shopify, JavaScript, React, or web
+      development in general, I can help!
+    </HeroPara>
+    <ButtonLink href="#hire-me" isAnchor>
+      Let's work together
+    </ButtonLink>
+  </HeroWrapper>
+);
 
-const HeroRight = () => {
-  const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  `;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
-  const SocialWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-  `;
+const SocialWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+`;
 
-  const SocialLink = styled.a`
-    & + a {
-      margin-left: 1.3rem;
-    }
+const SocialLink = styled.a`
+  & + a {
+    margin-left: 1.3rem;
+  }
 
-    &:hover {
-      opacity: 0.9;
-    }
-  `;
+  &:hover {
+    opacity: 0.9;
+  }
+`;
 
-  return (
-    <Wrapper>
-      <StaticImage
-        src="../assets/images/headshot.jpg"
-        placeholder="none"
-        loading="eager"
-        alt="Tom Tillistrand"
-        width={250}
-        height={250}
-        quality={90}
-        style={{ marginBottom: '2rem' }}
-        imgStyle={{ borderRadius: '50%' }}
-      />
-      <SocialWrapper>
-        <SocialLink
-          href="https://github.com/TomTilly"
-          target="_blank"
-          aria-label="Link to Github Profile"
-          rel="noopener noreferrer"
-        >
-          <GithubLogo />
-        </SocialLink>
-        <SocialLink
-          href="https://www.linkedin.com/in/tomtillistrand/"
-          target="_blank"
-          aria-label="Link to LinkedIn Profile"
-          rel="noopener noreferrer"
-        >
-          <LinkedInLogo />
-        </SocialLink>
-        <SocialLink
-          href="https://twitter.com/tomtillistrand"
-          target="_blank"
-          aria-label="Link to Twitter Profile"
-          rel="noopener noreferrer"
-        >
-          <TwitterLogo />
-        </SocialLink>
-        <SocialLink
-          href="https://www.youtube.com/channel/UCQ9R81vBuCKTgdO1R_haU6A"
-          target="_blank"
-          aria-label="Link to Youtube Profile"
-          rel="noopener noreferrer"
-        >
-          <YoutubeLogo />
-        </SocialLink>
-      </SocialWrapper>
-      <small>
-        <b>My tools:</b> HTML, CSS, SCSS, JavaScript, React, Styled Components,
-        GatsbyJS, Liquid, NodeJS, MongoDB, GraphQL, Figma, Git
-      </small>
-    </Wrapper>
-  );
-};
+const HeroRight = () => (
+  <Wrapper>
+    <StaticImage
+      src="../assets/images/headshot.jpg"
+      placeholder="none"
+      loading="eager"
+      alt="Tom Tillistrand"
+      width={250}
+      height={250}
+      quality={90}
+      style={{ marginBottom: '2rem' }}
+      imgStyle={{ borderRadius: '50%' }}
+    />
+    <SocialWrapper>
+      <SocialLink
+        href="https://github.com/TomTilly"
+        target="_blank"
+        aria-label="Link to Github Profile"
+        rel="noopener noreferrer"
+      >
+        <GithubLogo />
+      </SocialLink>
+      <SocialLink
+        href="https://www.linkedin.com/in/tomtillistrand/"
+        target="_blank"
+        aria-label="Link to LinkedIn Profile"
+        rel="noopener noreferrer"
+      >
+        <LinkedInLogo />
+      </SocialLink>
+      <SocialLink
+        href="https://twitter.com/tomtillistrand"
+        target="_blank"
+        aria-label="Link to Twitter Profile"
+        rel="noopener noreferrer"
+      >
+        <TwitterLogo />
+      </SocialLink>
+      <SocialLink
+        href="https://www.youtube.com/channel/UCQ9R81vBuCKTgdO1R_haU6A"
+        target="_blank"
+        aria-label="Link to Youtube Profile"
+        rel="noopener noreferrer"
+      >
+        <YoutubeLogo />
+      </SocialLink>
+    </SocialWrapper>
+    <small>
+      <b>My tools:</b> HTML, CSS, SCSS, JavaScript, React, Styled Components,
+      GatsbyJS, Liquid, NodeJS, MongoDB, GraphQL, Figma, Git
+    </small>
+  </Wrapper>
+);
 
 const LogoGrid = styled.div`
   display: grid;
@@ -258,13 +255,16 @@ function IndexPage() {
           Let's Get Started
         </ButtonLink>
       </Section>
-      <Section title="Companies I've Worked With">
+      <Section title="Past Clients">
         <LogoGrid>
           <ClientLogo src={jfLogoSrc} alt="Jack and Ferdi Logo" />
           <ClientLogo src={lnrjLogoSrc} alt="LNRJ United Logo" />
           <ClientLogo src={quartucciaLogoSrc} alt="Marica Quartuccia's Logo" />
           <ClientLogo src={dreamersTeamLogoSrc} alt="Dreamers Team Logo" />
         </LogoGrid>
+      </Section>
+      <Section title="Testimonials">
+        <Testimonials />
       </Section>
       <h1>Heading 1</h1>
       <p>
