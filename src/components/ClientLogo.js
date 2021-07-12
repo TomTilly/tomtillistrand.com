@@ -4,7 +4,7 @@ import ThemeContext from '../context/ThemeContext';
 
 const Logo = styled.img`
   ${({ isDarkMode }) => (isDarkMode ? 'filter: invert(1);' : '')}
-  height: 150px;
+  max-height: 150px;
 `;
 
 function ClientLogo({ src, alt }) {

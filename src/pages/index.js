@@ -21,6 +21,7 @@ import lnrjLogoSrc from '../assets/images/lnrj-united-logo.png';
 import quartucciaLogoSrc from '../assets/images/quartuccia-logo.png';
 import jfLogoSrc from '../assets/images/j-f-logo.svg';
 import dreamersTeamLogoSrc from '../assets/images/dreamers-team-logo.png';
+import { above } from '../utilities';
 
 const HeaderWrapper = styled.div`
   background-color: ${({ backgroundColor }) =>
@@ -29,6 +30,15 @@ const HeaderWrapper = styled.div`
 `;
 
 const HeroLeft = () => {
+  const HeroWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ${above.small`
+      align-items: flex-start;
+    `}
+  `;
   const HeroHeading = styled.h2`
     font-size: 2.8rem;
     line-height: 1.2;
@@ -55,7 +65,7 @@ const HeroLeft = () => {
   `;
 
   return (
-    <>
+    <HeroWrapper>
       <HeroHeading>
         👋 Hi, I'm Tom. I'm a Freelance Front End Web Developer specializing in{' '}
         <span className="green-underline">Shopify</span>.
@@ -72,10 +82,10 @@ const HeroLeft = () => {
         sound and a joy to use. If you need help with Shopify, JavaScript,
         React, or web development in general, I can help!
       </HeroPara>
-      <ButtonLink isInternal href="#hire-me">
+      <ButtonLink href="#hire-me" isAnchor>
         Let's work together
       </ButtonLink>
-    </>
+    </HeroWrapper>
   );
 };
 
@@ -157,6 +167,17 @@ const HeroRight = () => {
   );
 };
 
+const LogoGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 3rem;
+
+  ${above.med`
+    grid-template-columns: repeat(4, 1fr);
+  `}
+`;
+
 function IndexPage() {
   return (
     <>
@@ -237,12 +258,12 @@ function IndexPage() {
         </ButtonLink>
       </Section>
       <Section title="Companies I've Worked With">
-        <Grid columns={4}>
+        <LogoGrid>
           <ClientLogo src={jfLogoSrc} alt="Jack and Ferdi Logo" />
           <ClientLogo src={lnrjLogoSrc} alt="LNRJ United Logo" />
           <ClientLogo src={quartucciaLogoSrc} alt="Marica Quartuccia's Logo" />
           <ClientLogo src={dreamersTeamLogoSrc} alt="Dreamers Team Logo" />
-        </Grid>
+        </LogoGrid>
       </Section>
       <h1>Heading 1</h1>
       <p>

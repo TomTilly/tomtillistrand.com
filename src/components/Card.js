@@ -11,7 +11,7 @@ const CardStyles = styled.div`
   border-radius: var(--border-radius);
   background-color: var(--accent-bg);
 
-  ${above.small`
+  ${above.large`
     flex-direction: row;
     align-items: flex-start;
   `}
@@ -48,7 +48,7 @@ const CardTitle = styled.h3`
   font-size: var(--h4);
   text-align: center;
 
-  ${above.small`
+  ${above.large`
     text-align: left;
   `}
 `;

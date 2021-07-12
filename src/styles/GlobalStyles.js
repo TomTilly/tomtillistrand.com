@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { headingStyles } from '../utilities';
+import { headingStyles, above } from '../utilities';
 import 'normalize.css';
 
 const GlobalStyles = createGlobalStyle`
@@ -42,6 +42,7 @@ const GlobalStyles = createGlobalStyle`
     --body-font: Karla, var(--system-stack);
     --heading-font: Rubik, var(--system-stack);
     --root-font-size: 62.5%;
+    --root-font-size-small: 55%;
     --body-font-size: 1.8rem;
     --h1: 4.48rem;
     --h2: 3.73rem;
@@ -74,8 +75,11 @@ const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;
     line-height: 1.7;
-    font-size: var(--root-font-size);
+    font-size: var(--root-font-size-small);
     scroll-behavior: smooth;
+    ${above.small`
+      font-size: var(--root-font-size);
+    `}
   }
 
   *, *::before, *::after {

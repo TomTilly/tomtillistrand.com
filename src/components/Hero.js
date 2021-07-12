@@ -19,9 +19,24 @@ const HeroStyles = styled.div`
 
 const ContentWrapper = styled.div`
   display: grid;
-  grid-gap: 5rem;
-  grid-template-columns: 1.25fr 1fr;
+  grid-gap: 3rem;
+  grid-template-columns: 1fr;
   padding-bottom: 4rem;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1.25fr 1fr;
+    grid-gap: 5rem;
+  }
+`;
+
+const LeftColumn = styled.div``;
+
+const RightColumn = styled.div`
+  grid-row: 1;
+
+  @media (min-width: 900px) {
+    grid-row: auto;
+  }
 `;
 
 const ScrollDownLink = styled(Link)`
@@ -56,12 +71,12 @@ export default function Hero({ order, LeftContent, RightContent }) {
   return (
     <HeroStyles>
       <ContentWrapper>
-        <div>
+        <LeftColumn>
           <LeftContent />
-        </div>
-        <div>
+        </LeftColumn>
+        <RightColumn>
           <RightContent />
-        </div>
+        </RightColumn>
       </ContentWrapper>
       <ScrollDownLink to="#shopify-expert">
         <ScrollDownText>Learn more</ScrollDownText>

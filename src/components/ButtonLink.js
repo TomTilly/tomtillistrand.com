@@ -3,12 +3,19 @@ import React from 'react';
 import styled from 'styled-components';
 import { buttonStyles } from '../utilities';
 
-function ButtonLinkBase({ className, children, href, isInternal }) {
+function ButtonLinkBase({ className, children, href, isInternal, isAnchor }) {
   if (isInternal) {
     return (
       <Link className={className} to={href}>
         {children}
       </Link>
+    );
+  }
+  if (isAnchor) {
+    return (
+      <a className={className} href={href}>
+        {children}
+      </a>
     );
   }
   return (
