@@ -3,14 +3,21 @@ import React, { useState, useEffect, useMemo } from 'react';
 const ThemeContext = React.createContext(false);
 
 function ThemeProvider({ children }) {
-  // Get dark mode preference from local storage if it exists. Otherwise, default preference to false
+  // Get dark mode preference from local storage if it exists. Otherwise, default preference to false.
+  // Have to check to make sure that window exists first, so that we don't break gatsby build
   const [prefersDark, setPrefersDark] = useState(
-    JSON.parse(localStorage.getItem('prefersDark') || 'false')
+    JSON.parse(
+      (typeof window !== 'undefined' &&
+        window.localStorage.getItem('prefersDark')) ||
+        'false'
+    )
   );
 
   const toggleDark = () => {
     const newPreference = !prefersDark;
-    localStorage.setItem('prefersDark', JSON.stringify(newPreference));
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem('prefersDark', JSON.stringify(newPreference));
+    }
     setPrefersDark(newPreference);
   };
 
