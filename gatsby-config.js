@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Tom Tillistrand',
+    siteUrl: 'https://elated-saha-d3a9d7.netlify.app',
   },
   plugins: [
     'gatsby-plugin-styled-components',
