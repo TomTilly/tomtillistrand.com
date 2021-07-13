@@ -172,7 +172,7 @@ const GlobalStyles = createGlobalStyle`
     font-weight: bold;
   }
 
-  input, textarea {
+  input, textarea, select {
     --background-color: var(--white);
     padding: 1.2rem;
     background-color: var(--background-color);

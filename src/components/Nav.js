@@ -15,11 +15,15 @@ const HeaderContainer = styled.div`
 
 const Header = styled.header`
   position: relative;
-  padding: 5rem 0 1rem;
+  padding: 2rem 0;
   /* position: sticky;
   top: 0;
   background-color: var(--body-bg);
   transition: background-color 0.2s linear; */
+
+  ${above.large`
+    padding: 5rem 0 1rem;
+  `}
 
   .logo {
     display: flex;

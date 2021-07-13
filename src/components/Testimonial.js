@@ -8,7 +8,7 @@ import { above } from '../utilities';
 const TestimonialWrapper = styled.figure`
   display: grid;
   grid-auto-flow: row;
-  padding: 3rem;
+  padding: 2rem;
   ${({ alternate }) => {
     if (alternate) {
       return 'background-color: var(--accent-bg);';
@@ -20,12 +20,11 @@ const TestimonialWrapper = styled.figure`
   margin: 0;
 
   ${above.large`
+    grid-gap: 0 3rem;
     grid-template-columns: ${({ alternate }) => {
       if (alternate) {
-        console.log('hi');
         return '1fr auto';
       }
-      console.log('hi2');
       return 'auto 1fr';
     }};
   `}

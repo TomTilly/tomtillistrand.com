@@ -9,6 +9,9 @@ import { ButtonLink } from '../components/ButtonLink';
 import Section from '../components/Section';
 import Card from '../components/Card';
 import Testimonials from '../components/Testimonials';
+import ContactForm from '../components/ContactForm';
+import { above } from '../utilities';
+import romainSrc from '../assets/images/clients/romain.jpeg';
 import ClientLogo from '../components/ClientLogo';
 import GithubLogo from '../assets/images/github.inline.svg';
 import LinkedInLogo from '../assets/images/linkedin.inline.svg';
@@ -22,7 +25,6 @@ import lnrjLogoSrc from '../assets/images/lnrj-united-logo.png';
 import quartucciaLogoSrc from '../assets/images/quartuccia-logo.png';
 import jfLogoSrc from '../assets/images/j-f-logo.svg';
 import dreamersTeamLogoSrc from '../assets/images/dreamers-team-logo.png';
-import { above } from '../utilities';
 
 const HeaderWrapper = styled.div`
   background-color: ${({ backgroundColor }) =>
@@ -176,6 +178,15 @@ const LogoGrid = styled.div`
   `}
 `;
 
+const testimonials = [
+  {
+    name: 'Romain Aubanel',
+    company: 'LNRJ United',
+    quote: `I strongly recommend Tom’s services. Tom delivers high-quality websites that always integrate state-of-the-art features. Tom is always on time and goes the extra mile to make sure we are satisfied. It’s a pleasure to work with him.`,
+    avatar: romainSrc,
+  },
+];
+
 function IndexPage() {
   return (
     <>
@@ -256,107 +267,21 @@ function IndexPage() {
         </ButtonLink>
       </Section>
       <Section title="Past Clients">
-        <LogoGrid>
+        <LogoGrid style={{ marginBottom: '3rem' }}>
           <ClientLogo src={jfLogoSrc} alt="Jack and Ferdi Logo" />
           <ClientLogo src={lnrjLogoSrc} alt="LNRJ United Logo" />
           <ClientLogo src={quartucciaLogoSrc} alt="Marica Quartuccia's Logo" />
           <ClientLogo src={dreamersTeamLogoSrc} alt="Dreamers Team Logo" />
         </LogoGrid>
+        <Testimonials testimonials={testimonials} />
       </Section>
-      <Section title="Testimonials">
-        <Testimonials />
+      <Section type="thin" title="Ready To Get Started?" id="hire-me">
+        <p>
+          Let's get the ball rolling! Fill out the form below and let me know a
+          little bit about your project. I'll get back to you within 24 hours!
+        </p>
+        <ContactForm />
       </Section>
-      <h1>Heading 1</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ipsa
-        repellendus neque provident accusamus impedit quaerat incidunt officiis
-        velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
-      </p>
-      <h2>Heading 2</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ipsa
-        repellendus neque provident accusamus impedit quaerat incidunt officiis
-        velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
-      </p>
-      <h3>Heading 3</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ipsa
-        repellendus neque provident accusamus impedit quaerat incidunt officiis
-        velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
-      </p>
-      <ul>
-        <li>Hello!</li>
-        <li>List Item #2!</li>
-        <li>List Item #3!</li>
-        <li>List Item #4!</li>
-      </ul>
-      <form action="/" method="GET">
-        <div className="form-group">
-          <label htmlFor="name">
-            Name
-            <input
-              name="name"
-              type="text"
-              placeholder="Placeholder text!"
-              id="name"
-            />
-          </label>
-        </div>
-        <input type="password" />
-        <input type="email" />
-        <input type="number" />
-        <textarea />
-        <button type="submit">Submit</button>
-      </form>
-      <h4>Heading 4</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ipsa
-        repellendus neque provident accusamus impedit quaerat incidunt officiis
-        velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
-      </p>
-      <h5>Heading 5</h5>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ipsa
-        repellendus neque provident accusamus impedit quaerat incidunt officiis
-        velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
-      </p>
-      <h6 id="hire-me">Heading 6</h6>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ipsa
-        repellendus neque provident accusamus impedit quaerat incidunt officiis
-        velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ipsa
-        repellendus neque provident accusamus impedit quaerat incidunt officiis
-        velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ipsa
-        repellendus neque provident accusamus impedit quaerat incidunt officiis
-        velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ipsa
-        repellendus neque provident accusamus impedit quaerat incidunt officiis
-        velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ipsa
-        repellendus neque provident accusamus impedit quaerat incidunt officiis
-        velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, ipsa
-        repellendus neque provident accusamus impedit quaerat incidunt officiis
-        velit dolore, vel quas eos ullam saepe. A porro natus cum rerum.
-      </p>
-      <Button>Let's work together</Button>
-      <Button size="sm">Small</Button>
-      <Button size="md">Medium</Button>
-      <Button size="lg">Large</Button>
-      <Button type="secondary">Secondary</Button>
-      <Button type="ghost">Ghost</Button>
     </>
   );
 }
