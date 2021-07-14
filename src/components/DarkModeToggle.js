@@ -54,6 +54,15 @@ const ToggleSwitch = styled.button`
 function DarkModeToggle() {
   const { prefersDark, toggleDark } = useContext(ThemeContext);
 
+  /* This prevents the toggle from being rendered until after the site has been rehydrated by React
+   * and we know the user's preference for dark mode has been determined.
+   * For more info, see this post: https://www.joshwcomeau.com/react/dark-mode/
+   */
+  if (typeof prefersDark !== 'boolean') {
+    console.log('run');
+    return null;
+  }
+
   return (
     <ToggleSwitch aria-hidden="true" type="button" onClick={toggleDark}>
       <svg
