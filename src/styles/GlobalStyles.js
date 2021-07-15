@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
     --secondary-light: var(--green-300);
     --tertiary: var(--red);
     --body-bg: var(--white);
-    --accent-bg: hsla(234, 66%, 53%, .05);
+    --accent-bg: hsla(234, 66%, 53%, .075);
     --body-text-color: var(--black);
     --header-bg: var(--white);
     --outline-color: var(--primary);
@@ -192,6 +192,7 @@ const GlobalStyles = createGlobalStyle`
   .dark-mode {
     --body-bg: #2B2E3A;
     --body-text-color: var(--white);
+    --accent-bg: hsla(234, 66%, 53%, .3);
   }
 `;
 

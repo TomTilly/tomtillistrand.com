@@ -8,11 +8,9 @@ import ButtonLink from './ButtonLink';
 import { wideContainerStyles, above, buttonStyles } from '../utilities';
 
 const HamburgerContainer = ({ className, isMenuOpen, setIsMenuOpen }) => (
-  <Hamburger
-    className={className}
-    toggled={isMenuOpen}
-    toggle={setIsMenuOpen}
-  />
+  <div className={className}>
+    <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} />
+  </div>
 );
 
 const HeaderContainer = styled.div`
