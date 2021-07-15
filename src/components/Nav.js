@@ -7,6 +7,14 @@ import Monogram from '../assets/images/monogram.inline.svg';
 import ButtonLink from './ButtonLink';
 import { wideContainerStyles, above, buttonStyles } from '../utilities';
 
+const HamburgerContainer = ({ className, isMenuOpen, setIsMenuOpen }) => (
+  <Hamburger
+    className={className}
+    toggled={isMenuOpen}
+    toggle={setIsMenuOpen}
+  />
+);
+
 const HeaderContainer = styled.div`
   ${wideContainerStyles};
   display: flex;
@@ -51,7 +59,7 @@ const Header = styled.header`
   }
 `;
 
-const StyledHamburger = styled(Hamburger)`
+const StyledHamburger = styled(HamburgerContainer)`
   margin-left: auto;
   ${above.large`
     display: none;
@@ -120,7 +128,7 @@ const LogoText = ({ children, isHome, ...props }) =>
   isHome ? <h1 {...props}>{children}</h1> : <span {...props}>{children}</span>;
 
 export default function Nav({ isHome }) {
-  const [isOpen, setOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <Header>
@@ -148,7 +156,7 @@ export default function Nav({ isHome }) {
           {isHome && <CtaButton to="#hire-me">Let's work together</CtaButton>}
           <DarkModeToggle />
         </Menu>
-        <StyledHamburger toggled={isOpen} toggle={setOpen} />
+        <StyledHamburger />
       </HeaderContainer>
     </Header>
   );
