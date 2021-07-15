@@ -24,7 +24,9 @@ function ThemeProvider({ children }) {
   const value = useMemo(() => {
     const toggleDark = () => {
       const newPreference = !prefersDark;
-      document.body.classList.toggle('dark-mode');
+      document.documentElement.dataset.colorScheme = newPreference
+        ? 'dark'
+        : '';
       window.localStorage.setItem('prefersDark', JSON.stringify(newPreference));
       setPrefersDark(newPreference);
     };

@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
     --body-text-color: var(--black);
     --header-bg: var(--white);
     --outline-color: var(--primary);
-    --scrollbar-color: var(--body-bg);
+    --scrollbar-color: transparent;
     --scrollbar-thumb-color: var(--primary);
 
     /* Typography */
@@ -102,9 +102,9 @@ const GlobalStyles = createGlobalStyle`
     background: var(--primary);
     color: var(--white);
   }
-
-  ${
-    '' /* body::-webkit-scrollbar {
+${
+  '' /*  
+  body::-webkit-scrollbar {
     width: 12px;
   }
   
@@ -122,7 +122,7 @@ const GlobalStyles = createGlobalStyle`
     border-radius: 6px;
     border: 3px solid var(--scrollbar-color);
   } */
-  }
+}
 
   img {
     max-width: 100%;
@@ -189,10 +189,11 @@ const GlobalStyles = createGlobalStyle`
     outline-color: var(--outline-color);
   }
 
-  .dark-mode {
+  [data-color-scheme="dark"] {
     --body-bg: #2B2E3A;
     --body-text-color: var(--white);
     --accent-bg: hsla(234, 66%, 53%, .1);
+    color-scheme: dark;
   }
 `;
 

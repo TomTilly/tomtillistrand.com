@@ -32,7 +32,7 @@ const MagicScriptTag = () => {
       const prefersDark = getInitialPreference();
       const root = document.documentElement;
 
-      if (prefersDark === 'true') document.body.classList.add('dark-mode');
+      if (prefersDark === 'true') root.dataset.colorScheme = 'dark';
       root.style.setProperty('--initial-color-mode', prefersDark === 'true' ? 'dark' : 'light');
     })();
   `;
