@@ -156,7 +156,7 @@ export default function Nav({ isHome }) {
           {isHome && <CtaButton to="#hire-me">Let's work together</CtaButton>}
           <DarkModeToggle />
         </Menu>
-        <StyledHamburger />
+        <StyledHamburger toggled={isMenuOpen} toggle={setIsMenuOpen} />
       </HeaderContainer>
     </Header>
   );
