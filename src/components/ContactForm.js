@@ -27,10 +27,35 @@ const Input = styled.input`
   margin-top: 0.5rem;
 `;
 
-const Select = styled.select`
-  display: block;
-  width: 100%;
+const Select = ({ className, children, ...props }) => (
+  <div className={className}>
+    <select {...props}>{children}</select>
+  </div>
+);
+
+const SelectStyles = styled(Select)`
+  display: grid;
+  grid-template-areas: 'select';
+  align-items: center;
   margin-top: 0.5rem;
+
+  &::after {
+    content: '';
+    width: 0.6em;
+    height: 0.4em;
+    margin-right: 0.5em;
+    background-color: var(--gray-300);
+    clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+    grid-area: select;
+    justify-self: end;
+  }
+
+  select {
+    display: block;
+    width: 100%;
+    appearance: none;
+    grid-area: select;
+  }
 `;
 
 const TextArea = styled.textarea`
@@ -133,7 +158,7 @@ function ContactForm() {
       </Label>
       <Label>
         Budget
-        <Select
+        <SelectStyles
           name="budget"
           value={formData.budget}
           onChange={handleChange}
@@ -148,7 +173,7 @@ function ContactForm() {
           <option value="2500-5000">$2,500-$5,000</option>
           <option value="5000-10000">$5,000-$10,000</option>
           <option value="10000+">$10,000+</option>
-        </Select>
+        </SelectStyles>
       </Label>
       <Label>
         Message{' '}

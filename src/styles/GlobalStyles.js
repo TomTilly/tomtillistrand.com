@@ -179,13 +179,14 @@ ${
     border: 1px solid;
     border-color: var(--gray-300);
     border-radius: var(--border-radius);
+    color: var(--black);
   }
 
   ::placeholder {
     color: var(--gray-300);
   }
 
-  input, textarea, button {
+  input, select, textarea {
     outline-color: var(--outline-color);
   }
 
@@ -194,6 +195,11 @@ ${
     --body-text-color: var(--white);
     --accent-bg: hsla(234, 66%, 53%, .1);
     color-scheme: dark;
+  }
+
+  [data-color-scheme="dark"] :is(input, select, textarea):focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 3px #505FD6;
   }
 `;
 
