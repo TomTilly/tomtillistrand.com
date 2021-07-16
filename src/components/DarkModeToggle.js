@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import ThemeContext from '../context/ThemeContext';
+import { above } from '../utilities';
 
 const ToggleSwitch = styled.button`
   border: 0;
@@ -9,10 +10,14 @@ const ToggleSwitch = styled.button`
   cursor: pointer;
 
   .icon {
-    width: 25px;
+    width: 40px;
     height: auto;
     color: #f2c94c;
     transition: color 0.2s linear, transform 0.2s linear;
+
+    ${above.large`
+      width: 25px;
+    `}
   }
 
   .icon:hover {

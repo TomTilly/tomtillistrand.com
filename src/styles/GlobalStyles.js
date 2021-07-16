@@ -28,7 +28,9 @@ const GlobalStyles = createGlobalStyle`
     --secondary-light: var(--green-300);
     --tertiary: var(--red);
     --body-bg: var(--white);
-    --accent-bg: hsla(234, 66%, 53%, .075);
+    --accent-bg-hsla: hsla(234, 66%, 53%, .1);
+    --accent-bg: hsla(234, 66%, 53%, .05);
+    --menu-bg: rgba(255, 255, 255, .9);
     --body-text-color: var(--black);
     --header-bg: var(--white);
     --outline-color: var(--primary);
@@ -193,7 +195,8 @@ ${
   [data-color-scheme="dark"] {
     --body-bg: #2B2E3A;
     --body-text-color: var(--white);
-    --accent-bg: hsla(234, 66%, 53%, .1);
+    --accent-bg: #2C314C;
+    --menu-bg: rgba(0, 0, 0, .85);
     color-scheme: dark;
   }
 
