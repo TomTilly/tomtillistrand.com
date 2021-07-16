@@ -64,7 +64,6 @@ function DarkModeToggle() {
    * For more info, see this post: https://www.joshwcomeau.com/react/dark-mode/
    */
   if (typeof prefersDark !== 'boolean') {
-    console.log('run');
     return null;
   }
 

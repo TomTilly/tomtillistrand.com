@@ -116,7 +116,6 @@ export default function Testimonial({
   company,
   alternate,
 }) {
-  console.log(avatar);
   return (
     <TestimonialWrapper alternate={alternate}>
       <Avatar src={avatar} alt={name} alignRight={alternate} />

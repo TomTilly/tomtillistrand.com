@@ -8,13 +8,16 @@ import DownArrow from '../assets/images/down-arrow.inline.svg';
 
 const HeroStyles = styled.div`
   ${wideContainerStyles}
-  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 0.8rem;
   flex-grow: 1;
+
+  ${above.large`
+    margin-top: 5rem;
+  `}
 `;
 
 const ContentWrapper = styled.div`
