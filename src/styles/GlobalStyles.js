@@ -36,6 +36,7 @@ const GlobalStyles = createGlobalStyle`
     --outline-color: var(--primary);
     --scrollbar-color: transparent;
     --scrollbar-thumb-color: var(--primary);
+    --placeholder-color: var(--gray-300);
 
     /* Typography */
     --system-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -185,7 +186,7 @@ ${
   }
 
   ::placeholder {
-    color: var(--gray-300);
+    color: var(--placeholder-color);
   }
 
   input, select, textarea {

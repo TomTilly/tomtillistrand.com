@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Hamburger from 'hamburger-react';
 import DarkModeToggle from './DarkModeToggle';
 import Monogram from '../assets/images/monogram.inline.svg';
+import Logo from './Logo';
 import { wideContainerStyles, above, buttonStyles, below } from '../utilities';
 
 const HamburgerContainer = ({ className, isMenuOpen, setIsMenuOpen }) => (
@@ -29,31 +30,6 @@ const Header = styled.header`
   ${above.large`
     padding: 5rem 0 1rem;
   `}
-
-  .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-
-    svg {
-      margin-right: 1.5rem;
-      flex-shrink: 0;
-    }
-
-    &__text {
-      display: none;
-      font-size: 2.9rem;
-      font-weight: bold;
-      font-family: var(--heading-font);
-      flex-shrink: 0;
-      margin-bottom: 0;
-
-      ${above.small`
-        display: block;
-      `}
-    }
-  }
 `;
 
 const StyledHamburger = styled(HamburgerContainer)`
@@ -77,11 +53,12 @@ const CtaButton = styled(Link)`
 `;
 
 const NavStyles = styled.nav`
-  flex-grow: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 3rem;
 
   ${above.large`
+    margin-bottom: 0;
     display: unset;
     margin-right: auto;
   `}
@@ -139,6 +116,7 @@ const NavStyles = styled.nav`
 
 // Menu contains the nav, CtaButton (if rendered), and DarkModeToggle. Used to group items for mobile nav
 const Menu = styled.div`
+  overflow: auto;
   position: fixed;
   top: 0;
   right: 0;
@@ -169,8 +147,10 @@ const Menu = styled.div`
   `};
 `;
 
-const LogoText = ({ children, isHome, ...props }) =>
-  isHome ? <h1 {...props}>{children}</h1> : <span {...props}>{children}</span>;
+const HomeLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
 
 export default function Nav({ isHome }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -183,12 +163,9 @@ export default function Nav({ isHome }) {
   return (
     <Header>
       <HeaderContainer>
-        <Link to="/" className="logo" aria-label="Link to homepage">
-          <Monogram />
-          <LogoText className="logo__text" isHome={isHome}>
-            Tom Tillistrand
-          </LogoText>
-        </Link>
+        <HomeLink to="/" aria-label="Link to homepage">
+          <Logo isHome={isHome} />
+        </HomeLink>
         <Menu isMenuOpen={isMenuOpen}>
           <NavStyles isMenuOpen={isMenuOpen}>
             <ul>

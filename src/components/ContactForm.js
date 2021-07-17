@@ -55,6 +55,7 @@ const SelectStyles = styled(Select)`
     width: 100%;
     appearance: none;
     grid-area: select;
+    ${({ value }) => value === 'default' && 'color: var(--placeholder-color);'}
   }
 `;
 
