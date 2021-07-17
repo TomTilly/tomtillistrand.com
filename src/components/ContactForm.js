@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { above, headingStyles } from '../utilities';
 import { Button } from './Button';
+import Spinner from './Spinner';
 
 const FormStyles = styled.form`
   padding: 2rem;
@@ -79,6 +80,10 @@ const SuccessMessage = styled.p`
   color: var(--secondary);
 `;
 
+const Error = styled.p`
+  color: var(--red);
+`;
+
 function encode(data) {
   return Object.keys(data)
     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
@@ -95,7 +100,8 @@ function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [hasError, setHasError] = useState(false);
-  let errorMsg;
+  let errorMsg =
+    'There was a problem submitting the contact form. Please try again.';
 
   const handleChange = (e) => {
     const newState = {
@@ -107,6 +113,7 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     const form = e.target;
     fetch('/', {
       method: 'POST',
@@ -118,6 +125,7 @@ function ContactForm() {
     })
       .then(() => {
         setFormSubmitted(true);
+        setIsSubmitting(false);
       })
       .catch((error) => {
         setHasError(true);
@@ -129,10 +137,12 @@ function ContactForm() {
     <FormStyles
       name="contact"
       method="POST"
+      action="/"
       data-netlify-honeypot="bot-field"
       data-netlify="true"
       onSubmit={handleSubmit}
     >
+      {hasError && <Error>{errorMsg}</Error>}
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="contact" />
       <Label>
@@ -188,7 +198,7 @@ function ContactForm() {
         />
       </Label>
       <SubmitButton type="submit" size="lg">
-        Hire me
+        {isSubmitting ? <Spinner /> : 'Send'}
       </SubmitButton>
     </FormStyles>
   ) : (
