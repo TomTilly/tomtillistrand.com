@@ -66,6 +66,7 @@ const NavStyles = styled.nav`
   ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,7 +102,11 @@ const NavStyles = styled.nav`
     display: block;
     background-color: var(--primary);
     transition: width 0.15s linear;
-    margin-top: -3px;
+    margin-top: -6px;
+
+    ${above.large`
+      margin-top: -3px;
+    `}
   }
 
   [aria-current='page']::after {

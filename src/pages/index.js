@@ -22,19 +22,14 @@ import quartucciaLogoSrc from '../assets/images/quartuccia-logo.png';
 import jfLogoSrc from '../assets/images/j-f-logo.svg';
 import dreamersTeamLogoSrc from '../assets/images/dreamers-team-logo.png';
 import SocialLinks from '../components/SocialLinks';
-
-const HeaderWrapper = styled.div`
-  background-color: ${({ backgroundColor }) =>
-    backgroundColor || 'var(--accent-bg)'};
-  ${({ backgroundImage }) => `background-image: url(${backgroundImage});`}
-`;
+import HeaderWrapper from '../components/HeaderWrapper';
 
 const HeroWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  ${above.small`
+  ${above.large`
     align-items: flex-start;
   `}
 `;
@@ -94,6 +89,10 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
+const MyTools = styled.small`
+  text-align: center;
+`;
+
 const HeroRight = () => (
   <Wrapper>
     <StaticImage
@@ -108,10 +107,10 @@ const HeroRight = () => (
       imgStyle={{ borderRadius: '50%' }}
     />
     <SocialLinks />
-    <small>
+    <MyTools>
       <b>My tools:</b> HTML, CSS, SCSS, JavaScript, React, Styled Components,
       GatsbyJS, Liquid, NodeJS, MongoDB, GraphQL, Figma, Git
-    </small>
+    </MyTools>
   </Wrapper>
 );
 
@@ -224,7 +223,7 @@ function IndexPage() {
         <Testimonials testimonials={testimonials} />
       </Section>
       <Section type="thin" title="Ready To Get Started?" id="hire-me">
-        <p>
+        <p style={{ textAlign: 'center' }}>
           Let's get the ball rolling! Fill out the form below and let me know a
           little bit about your project. I'll get back to you within 24 hours!
         </p>
