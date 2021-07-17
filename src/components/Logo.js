@@ -36,9 +36,9 @@ const LogoTextStyles = styled(LogoText)`
   `}
 `;
 
-export default function Logo({ ...props }) {
+export default function Logo({ className, ...props }) {
   return (
-    <LogoStyles>
+    <LogoStyles className={className}>
       <MonogramStyles />
       <LogoTextStyles {...props}>Tom Tillistrand</LogoTextStyles>
     </LogoStyles>

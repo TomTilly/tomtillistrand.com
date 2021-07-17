@@ -10,14 +10,10 @@ const ToggleSwitch = styled.button`
   cursor: pointer;
 
   .icon {
-    width: 40px;
+    width: 30px
     height: auto;
     color: #f2c94c;
     transition: color 0.2s linear, transform 0.2s linear;
-
-    ${above.large`
-      width: 25px;
-    `}
   }
 
   .icon:hover {
