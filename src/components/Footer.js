@@ -1,11 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import { wideContainerStyles } from '../utilities';
+import Logo from './Logo';
+import Container from './Container';
 
 const FooterStyles = styled.footer`
-  ${wideContainerStyles}
+  background-color: #36394d;
+  padding: 5rem 0;
 `;
 
 export default function Footer() {
-  return <footer />;
+  return (
+    <FooterStyles>
+      <Container>
+        <Logo color="var(--white)" />
+      </Container>
+    </FooterStyles>
+  );
 }

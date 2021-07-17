@@ -3,8 +3,12 @@ import styled from 'styled-components';
 import MonogramSVG from '../assets/images/monogram.inline.svg';
 import { above } from '../utilities';
 
-const LogoText = ({ children, isHome, ...props }) =>
-  isHome ? <h1 {...props}>{children}</h1> : <span {...props}>{children}</span>;
+const LogoText = ({ children, CustomTag, color, ...props }) =>
+  CustomTag ? (
+    <CustomTag {...props}>{children}</CustomTag>
+  ) : (
+    <span {...props}>{children}</span>
+  );
 
 const Monogram = ({ className }) => <MonogramSVG className={className} />;
 
@@ -25,17 +29,18 @@ const LogoTextStyles = styled(LogoText)`
   font-family: var(--heading-font);
   flex-shrink: 0;
   margin-bottom: 0;
+  color: ${({ color }) => color || 'inherit'};
 
   ${above.small`
     display: block;
   `}
 `;
 
-export default function Logo({ isHome }) {
+export default function Logo({ ...props }) {
   return (
     <LogoStyles>
       <MonogramStyles />
-      <LogoTextStyles isHome={isHome}>Tom Tillistrand</LogoTextStyles>
+      <LogoTextStyles {...props}>Tom Tillistrand</LogoTextStyles>
     </LogoStyles>
   );
 }

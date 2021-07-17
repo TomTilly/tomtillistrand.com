@@ -164,7 +164,7 @@ export default function Nav({ isHome }) {
     <Header>
       <HeaderContainer>
         <HomeLink to="/" aria-label="Link to homepage">
-          <Logo isHome={isHome} />
+          {isHome ? <Logo CustomTag="h1" /> : <Logo />}
         </HomeLink>
         <Menu isMenuOpen={isMenuOpen}>
           <NavStyles isMenuOpen={isMenuOpen}>
