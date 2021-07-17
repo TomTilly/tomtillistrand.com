@@ -3,9 +3,8 @@ import { Link } from 'gatsby';
 
 // styles
 const pageStyles = {
-  color: '#232129',
+  color: 'var(--body-text-color)',
   padding: '96px',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
 };
 const headingStyles = {
   marginTop: 0,
