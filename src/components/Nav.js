@@ -159,10 +159,12 @@ const HomeLink = styled(Link)`
 
 export default function Nav({ isHome }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  if (isMenuOpen) {
-    document.documentElement.style.setProperty('overflow', 'hidden');
-  } else {
-    document.documentElement.style.setProperty('overflow', 'auto');
+  if (typeof window !== 'undefined') {
+    if (isMenuOpen) {
+      window.document.documentElement.style.setProperty('overflow', 'hidden');
+    } else {
+      window.document.documentElement.style.setProperty('overflow', 'auto');
+    }
   }
 
   return (

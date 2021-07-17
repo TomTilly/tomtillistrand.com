@@ -3,8 +3,6 @@ import React, { useState, useEffect, useMemo } from 'react';
 const ThemeContext = React.createContext();
 
 function ThemeProvider({ children }) {
-  // Get dark mode preference from local storage if it exists. Otherwise, default preference to false.
-  // Have to check to make sure that window exists first, so that we don't break gatsby build
   const [prefersDark, setPrefersDark] = useState(undefined);
 
   useEffect(() => {
