@@ -13,10 +13,6 @@ import ContactForm from '../components/ContactForm';
 import { above } from '../utilities';
 import romainSrc from '../assets/images/clients/romain.jpeg';
 import ClientLogo from '../components/ClientLogo';
-import GithubLogo from '../assets/images/github.inline.svg';
-import LinkedInLogo from '../assets/images/linkedin.inline.svg';
-import TwitterLogo from '../assets/images/twitter.inline.svg';
-import YoutubeLogo from '../assets/images/youtube.inline.svg';
 import WebsiteIcon from '../assets/images/website-with-brackets.inline.svg';
 import WindowIcon from '../assets/images/window.inline.svg';
 import ShoppingIcon from '../assets/images/shopping-gear.inline.svg';
@@ -25,6 +21,7 @@ import lnrjLogoSrc from '../assets/images/lnrj-united-logo.png';
 import quartucciaLogoSrc from '../assets/images/quartuccia-logo.png';
 import jfLogoSrc from '../assets/images/j-f-logo.svg';
 import dreamersTeamLogoSrc from '../assets/images/dreamers-team-logo.png';
+import SocialLinks from '../components/SocialLinks';
 
 const HeaderWrapper = styled.div`
   background-color: ${({ backgroundColor }) =>
@@ -97,22 +94,6 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const SocialWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-`;
-
-const SocialLink = styled.a`
-  & + a {
-    margin-left: 1.3rem;
-  }
-
-  &:hover {
-    opacity: 0.9;
-  }
-`;
-
 const HeroRight = () => (
   <Wrapper>
     <StaticImage
@@ -126,40 +107,7 @@ const HeroRight = () => (
       style={{ marginBottom: '2rem' }}
       imgStyle={{ borderRadius: '50%' }}
     />
-    <SocialWrapper>
-      <SocialLink
-        href="https://github.com/TomTilly"
-        target="_blank"
-        aria-label="Link to Github Profile"
-        rel="noopener noreferrer"
-      >
-        <GithubLogo />
-      </SocialLink>
-      <SocialLink
-        href="https://www.linkedin.com/in/tomtillistrand/"
-        target="_blank"
-        aria-label="Link to LinkedIn Profile"
-        rel="noopener noreferrer"
-      >
-        <LinkedInLogo />
-      </SocialLink>
-      <SocialLink
-        href="https://twitter.com/tomtillistrand"
-        target="_blank"
-        aria-label="Link to Twitter Profile"
-        rel="noopener noreferrer"
-      >
-        <TwitterLogo />
-      </SocialLink>
-      <SocialLink
-        href="https://www.youtube.com/channel/UCQ9R81vBuCKTgdO1R_haU6A"
-        target="_blank"
-        aria-label="Link to Youtube Profile"
-        rel="noopener noreferrer"
-      >
-        <YoutubeLogo />
-      </SocialLink>
-    </SocialWrapper>
+    <SocialLinks />
     <small>
       <b>My tools:</b> HTML, CSS, SCSS, JavaScript, React, Styled Components,
       GatsbyJS, Liquid, NodeJS, MongoDB, GraphQL, Figma, Git

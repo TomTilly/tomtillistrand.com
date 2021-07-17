@@ -146,6 +146,10 @@ ${
     ${headingStyles};
   }
 
+  :first-child { 
+    margin-top: 0;
+  }
+
   h1, .h1 {
     margin-top: 0;
     font-size: var(--h1);
