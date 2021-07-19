@@ -10,6 +10,9 @@ import Section from '../components/Section';
 import Card from '../components/Card';
 import Testimonials from '../components/Testimonials';
 import ContactForm from '../components/ContactForm';
+import SocialLinks from '../components/SocialLinks';
+import HeaderWrapper from '../components/HeaderWrapper';
+import SEO from '../components/SEO';
 import { above } from '../utilities';
 import romainSrc from '../assets/images/clients/romain.jpeg';
 import ClientLogo from '../components/ClientLogo';
@@ -21,8 +24,7 @@ import lnrjLogoSrc from '../assets/images/lnrj-united-logo.png';
 import quartucciaLogoSrc from '../assets/images/quartuccia-logo.png';
 import jfLogoSrc from '../assets/images/j-f-logo.svg';
 import dreamersTeamLogoSrc from '../assets/images/dreamers-team-logo.png';
-import SocialLinks from '../components/SocialLinks';
-import HeaderWrapper from '../components/HeaderWrapper';
+import headshot from '../assets/images/headshot.jpg';
 
 const HeroWrapper = styled.div`
   display: flex;
@@ -137,6 +139,7 @@ const testimonials = [
 function IndexPage() {
   return (
     <>
+      <SEO title="Freelance Shopify Developer" image={headshot} />
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <HeaderWrapper>
           <Nav isHome />

@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: 'Tom Tillistrand',
-    siteUrl: 'https://elated-saha-d3a9d7.netlify.app',
+    siteUrl: 'https://tomtillistrand.com',
+    description:
+      'Freelance Front End Developer specializing in Shopify and React',
+    twitter: '@tomtillistrand',
   },
   plugins: [
     'gatsby-plugin-styled-components',

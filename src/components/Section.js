@@ -10,9 +10,6 @@ const SectionStyles = styled.section`
     return wideContainerStyles;
   }}
   padding: 5rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `;
 
 const SectionTitle = styled.h2`
