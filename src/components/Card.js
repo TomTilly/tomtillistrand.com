@@ -31,6 +31,8 @@ const IconWrapper = styled.div`
     return `background-color: rgba(${rgbString}, .1);`;
   }}
   svg {
+    width: 24px;
+    height: 24px;
     ${({ rgb }) => {
       if (!rgb) return;
       const rgbString = rgb.map(String).join(', ');

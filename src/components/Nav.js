@@ -52,7 +52,6 @@ export default function Nav({ isHome }) {
     <Header>
       <HeaderContainer>
         {isHome ? <LogoStyles CustomTag="h1" /> : <LogoStyles />}
-        {isHome && <CtaButton to="#hire-me">Let's work together</CtaButton>}
         <DarkModeToggle />
       </HeaderContainer>
     </Header>
