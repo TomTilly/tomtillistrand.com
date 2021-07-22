@@ -68,12 +68,12 @@ export default function Footer() {
             <li>
               <StyledLink to="/about">About</StyledLink>
             </li>
-            <li>
+            {/* <li>
               <StyledLink to="/articles">Articles</StyledLink>
             </li>
             <li>
               <StyledLink to="/snippets">Snippets</StyledLink>
-            </li>
+            </li> */}
           </FooterNav>
           <StyledSocialLinks />
           <p>&copy; 2021 Tom Tillistrand</p>

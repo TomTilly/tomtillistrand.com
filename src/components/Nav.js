@@ -179,12 +179,12 @@ export default function Nav({ isHome }) {
               <li>
                 <Link to="/about">About</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/articles">Articles</Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link to="/snippets">Snippets</Link>
-              </li>
+              </li> */}
             </ul>
           </NavStyles>
           <DarkModeToggle />
