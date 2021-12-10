@@ -180,7 +180,7 @@ function IndexPage() {
           />
         </CardContainer>
       </Section>
-      <Section type="thin" title="Hire Me">
+      <Section type="thin" title="Why Hire Me?">
         <p>
           Getting your site right is critical for succeeding in today’s world.
           If your site is slow, buggy, unintuitive, lacking features, or ugly,
