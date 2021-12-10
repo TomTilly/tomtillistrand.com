@@ -180,7 +180,7 @@ function IndexPage() {
           />
         </CardContainer>
       </Section>
-      <Section type="thin" title="Why Hire Me?">
+      <Section type="thin" title="Hire Me">
         <p>
           Getting your site right is critical for succeeding in today’s world.
           If your site is slow, buggy, unintuitive, lacking features, or ugly,
@@ -207,7 +207,7 @@ function IndexPage() {
           service to my clients. You can rest easy knowing that I care just as
           much about your business as you do.
         </p>
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', marginTop: '5rem' }}>
           <ButtonLink isInternal href="#hire-me" size="lg">
             Let's Get Started
           </ButtonLink>
