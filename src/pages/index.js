@@ -81,14 +81,14 @@ const HeroLeft = () => (
   // TODO: Fix rerendering of Hero component when clicking anchor links
   <HeroWrapper>
     <HeroHeading>
-      👋 Hi, I'm Tom. I'm a Freelance Front End Web Developer based in Boston.
+      👋 Hi, I'm Tom, a freelance front end web developer based in Boston.
     </HeroHeading>
     <HeroPara>
-      I’ve been developing websites professionally for five years. Over that
-      time I’ve worked with a wide breadth of languages and tools, but my aim
-      has continued to be to improve the world by creating high quality
-      software. To that end, I’m constantly keeping up with the latest
-      advancements and challenging myself to keep my chops sharp. My current
+      I started building websites professionally five years ago with the goal of
+      creating exceptional online experiences for businesses. Over that time
+      I've worked with a wide range of languages, tools, and disciplines in
+      service of that end. I'm constantly keeping up with the latest
+      advancements in web tech in order to keep my skills sharp. My current
       areas of focus are JavaScript, React, and the JAMstack with GatsbyJS.
     </HeroPara>
     <ButtonLink href="#hire-me" isAnchor>
