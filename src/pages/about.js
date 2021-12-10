@@ -44,7 +44,7 @@ export default function About() {
             business and coding to pursue web development full time as a
             freelancer. At first I focused on Wordpress, gradually shifting into
             Shopify and JavaScript focused stacks with NodeJS and React. Most of
-            my time now is devoted to building highly polished React based
+            my time now is devoted to building highly polished React-based
             websites, and keeping myself up to date with the latest advances in
             web development.
           </p>

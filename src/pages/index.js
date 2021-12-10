@@ -158,10 +158,7 @@ function IndexPage() {
           <Hero LeftContent={HeroLeft} RightContent={HeroRight} />
         </HeaderWrapper>
       </div>
-      <Section
-        title="How can an expert Shopify developer help?"
-        id="shopify-expert"
-      >
+      <Section title="My Services" id="shopify-expert">
         <CardContainer>
           <Card
             title="Website Development"
@@ -192,9 +189,9 @@ function IndexPage() {
           bottom line.
         </p>
         <p>
-          Oftentimes businesses will skimp on the web development costs upfront,
-          resulting in unpolished, mediocre experiences for their users. Rather
-          than hiring a someone to fix your store after you’ve lost potential
+          Often businesses skimp on the web development costs upfront, resulting
+          in unpolished, mediocre experiences for their users. Rather than
+          hiring a someone to fix your site after you’ve lost potential
           customers, why not save yourself the time and hassle and get it right
           the first time?
         </p>
@@ -210,9 +207,11 @@ function IndexPage() {
           service to my clients. You can rest easy knowing that I care just as
           much about your business as you do.
         </p>
-        <ButtonLink isInternal href="#hire-me" size="lg">
-          Let's Get Started
-        </ButtonLink>
+        <div style={{ textAlign: 'center' }}>
+          <ButtonLink isInternal href="#hire-me" size="lg">
+            Let's Get Started
+          </ButtonLink>
+        </div>
       </Section>
       <Section title="Past Clients">
         <LogoGrid style={{ marginBottom: '3rem' }}>
