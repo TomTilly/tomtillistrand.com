@@ -63,6 +63,7 @@ const LogoTextStyles = styled(LogoText)`
   font-family: var(--heading-font);
   flex-shrink: 0;
   margin-bottom: 0;
+  letter-spacing: 0.5px;
   color: ${({ color }) => color || 'inherit'};
 
   ${above.small`

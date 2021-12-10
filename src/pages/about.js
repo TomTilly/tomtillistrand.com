@@ -3,10 +3,13 @@ import Nav from '../components/Nav';
 import HeaderWrapper from '../components/HeaderWrapper';
 import Section from '../components/Section';
 import ContactForm from '../components/ContactForm';
+import headshot from '../assets/images/headshot.jpg';
+import SEO from '../components/SEO';
 
 export default function About() {
   return (
     <>
+      <SEO title="Freelance Shopify Developer" image={headshot} />
       <HeaderWrapper>
         <Nav />
         <Section type="thin">
