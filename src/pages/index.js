@@ -196,11 +196,11 @@ function IndexPage() {
           the first time?
         </p>
         <p>
-          I will get your site done right. My sites are built on a foundation of
-          modern tooling with clean HTML, CSS, JavaScript, and React. I’m easy
-          to work with, a clear communicator, and able to work on my own or as
-          part of a team. I can also advise on key technical decisions to make
-          sure your site infrastructure is robust, fast, and scalable.
+          My sites are built on a foundation of modern tooling with clean HTML,
+          CSS, JavaScript, and React. I’m easy to work with, a clear
+          communicator, and able to work on my own or as part of a team. I can
+          also advise on key technical decisions to make sure your site
+          infrastructure is robust, fast, and scalable.
         </p>
         <p>
           I take pride in producing quality work and providing outstanding
