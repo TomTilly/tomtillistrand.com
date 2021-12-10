@@ -60,24 +60,36 @@ const HeroHeading = styled.h2`
 const HeroPara = styled.p`
   margin-bottom: 2rem;
 `;
+
+const CardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  & > * {
+    width: 100%;
+
+    ${above.large`
+      width: 45%;
+      min-width: 400px;
+    `}
+  }
+`;
+
 const HeroLeft = () => (
   // TODO: Fix rerendering of Hero component when clicking anchor links
   <HeroWrapper>
     <HeroHeading>
-      👋 Hi, I'm Tom. I'm a Freelance Front End Web Developer specializing in{' '}
-      <span className="green-underline">Shopify</span>.
+      👋 Hi, I'm Tom. I'm a Freelance Front End Web Developer based in Boston.
     </HeroHeading>
     <HeroPara>
-      Here you can find out more about my web development services and read
-      through my various programming, Shopify, and freelancing articles.
-      Welcome, and thanks for checking out my site!
-    </HeroPara>
-    <HeroPara>
-      <b>A little bit about me:</b> I’ve been building professional websites for
-      six years from my office in Boston, Massachusetts. My current focus is
-      building modern Shopify websites and apps that are both technically sound
-      and a joy to use. If you need help with Shopify, JavaScript, React, or web
-      development in general, I can help!
+      I’ve been developing websites professionally for five years. Over that
+      time I’ve worked with a wide breadth of languages and tools, but my aim
+      has continued to be to improve the world by creating high quality
+      software. To that end, I’m constantly keeping up with the latest
+      advancements and challenging myself to keep my chops sharp. My current
+      areas of focus are JavaScript, React, and the JAMstack with GatsbyJS.
     </HeroPara>
     <ButtonLink href="#hire-me" isAnchor>
       Let's work together
@@ -110,8 +122,8 @@ const HeroRight = () => (
     />
     <SocialLinks />
     <MyTools>
-      <b>My tools:</b> HTML, CSS, SCSS, JavaScript, React, Styled Components,
-      GatsbyJS, Liquid, NodeJS, MongoDB, GraphQL, Figma, Git
+      <b>My tools:</b> HTML, CSS, SCSS, JavaScript, React, GatsbyJS, Vue,
+      Gridsome, Liquid, NodeJS, MongoDB, Styled Components, Figma, Git
     </MyTools>
   </Wrapper>
 );
@@ -150,67 +162,53 @@ function IndexPage() {
         title="How can an expert Shopify developer help?"
         id="shopify-expert"
       >
-        <Grid>
+        <CardContainer>
           <Card
-            title="Theme Development"
-            description="I develop bespoke Shopify themes from scratch using modern HTML, CSS, JavaScript, and Liquid. If you have a design, I can build a pixel perfect implementation for you."
+            title="Website Development"
+            description="I develop bespoke websites from scratch using modern HTML, CSS, JavaScript, and React. If you have a design, I can build a pixel perfect implementation for you."
             Icon={WebsiteIcon}
             rgb={[0, 176, 132]}
           />
           <Card
-            title="App Development"
-            description="I build Shopify apps that extend the functionality of Shopify using NodeJS and React."
-            Icon={WindowIcon}
-            rgb={[55, 72, 214]}
-          />
-          <Card
-            title="Theme Customizations"
+            title="Shopify Development"
             description="I customize prexisting Shopify themes to fit your needs. If you have a theme that you like but need to tweak, I can get it just right for you."
             Icon={ShoppingIcon}
             rgb={[255, 59, 72]}
           />
           <Card
             title="Headless CMS Integration"
-            description="I implement Shopify as a headless CMS and build a detached front end in React with Gatsby."
+            description="I can integrate headless CMS’ like Wordpress, Shopify, ButterCMS, Sanity, and more into your website, so you can enjoy all the benefits of the JAMstack."
             Icon={LayersIcon}
             rgb={[106, 55, 214]}
           />
-        </Grid>
+        </CardContainer>
       </Section>
       <Section type="thin" title="Why Hire Me?">
         <p>
-          Getting your Shopify store done right is important. If your site is
-          slow, buggy, unintuitive, lacking features, or ugly, it can cost you
-          in reputation and revenue.
+          Getting your site right is critical for succeeding in today’s world.
+          If your site is slow, buggy, unintuitive, lacking features, or ugly,
+          it can cost you in reputation and revenue. I can make sure you avoid
+          those pitfalls and build a site that’s a joy to use and increases your
+          bottom line.
         </p>
         <p>
-          I can make sure you avoid those pitfalls and build a store that’s a
-          joy to use and increases your bottom line.
+          Oftentimes businesses will skimp on the web development costs upfront,
+          resulting in unpolished, mediocre experiences for their users. Rather
+          than hiring a someone to fix your store after you’ve lost potential
+          customers, why not save yourself the time and hassle and get it right
+          the first time?
         </p>
         <p>
-          Often, businesses will skimp on the development of their stores
-          upfront, resulting in unpolished, mediocre experiences for their
-          users.
-        </p>
-        <p>
-          Rather than hiring a Shopify expert to fix your store after you’ve
-          lost potential customers, why not save yourself the time and hassle
-          and get it right the first time?
-        </p>
-        <p>
-          I will get your Shopify site done right. My sites are built on a
-          foundation of modern tooling with clean HTML, Liquid, CSS, SCSS,
-          JavaScript, and React.
-        </p>
-        <p>
-          I’m easy to work with, a clear communicator, and able to work on my
-          own or as part of a team. I can also advise on key technical decisions
-          to make sure your site infrastructure is robust, fast, and scalable.
+          I will get your site done right. My sites are built on a foundation of
+          modern tooling with clean HTML, CSS, JavaScript, and React. I’m easy
+          to work with, a clear communicator, and able to work on my own or as
+          part of a team. I can also advise on key technical decisions to make
+          sure your site infrastructure is robust, fast, and scalable.
         </p>
         <p>
           I take pride in producing quality work and providing outstanding
-          service to my clients. You can be confident that your store (and
-          business) is treated with the utmost care.
+          service to my clients. You can rest easy knowing that I care just as
+          much about your business as you do.
         </p>
         <ButtonLink isInternal href="#hire-me" size="lg">
           Let's Get Started
