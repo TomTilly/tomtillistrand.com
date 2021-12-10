@@ -164,13 +164,13 @@ function IndexPage() {
             title="Website Development"
             description="I develop bespoke websites from scratch using modern HTML, CSS, JavaScript, and React. If you have a design, I can build a pixel perfect implementation for you."
             Icon={WebsiteIcon}
-            rgb={[0, 176, 132]}
+            rgb={[255, 59, 72]}
           />
           <Card
             title="Shopify Development"
             description="I customize prexisting Shopify themes to fit your needs. If you have a theme that you like but need to tweak, I can get it just right for you."
             Icon={ShoppingIcon}
-            rgb={[255, 59, 72]}
+            rgb={[0, 176, 132]}
           />
           <Card
             title="Headless CMS Integration"
