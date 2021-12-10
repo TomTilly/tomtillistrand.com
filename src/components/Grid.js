@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { above } from '../utilities';
 
 const GridStyles = styled.div`
@@ -16,10 +17,18 @@ const GridStyles = styled.div`
   `}
 `;
 
-export default function Grid({ children, columns, minColWidth }) {
+function Grid({ children, columns, minColWidth }) {
   return (
     <GridStyles columns={columns} minColWidth={minColWidth}>
       {children}
     </GridStyles>
   );
 }
+
+Grid.propTypes = {
+  children: PropTypes.element,
+  columns: PropTypes.string,
+  minColWidth: PropTypes.string,
+};
+
+export default Grid;

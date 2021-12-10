@@ -125,7 +125,6 @@ function ContactForm() {
     })
       .then(() => {
         setFormSubmitted(true);
-        setIsSubmitting(false);
       })
       .catch((error) => {
         setHasError(true);
